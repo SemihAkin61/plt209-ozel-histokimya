@@ -1,0 +1,1260 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>PLT209 Özel Histokimya Teknikleri · Vize Çalışma Rehberi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="PLT209 Özel Histokimya Teknikleri dersi vize çalışması: Hafta 2–7 konu özetleri, boyama karşılaştırma tabloları, deneme sınavı, kavram kartları ve kopya kağıdı.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{
+  --bg:#F4F7FD; --surface:#FFFFFF; --sunk:#EBF0FA; --ink:#0F172A; --muted:#4A5568; --line:#DAE2F0;
+  --primary:#2563EB; --primary-soft:#E3ECFE; --on-primary:#FFFFFF;
+  --gold:#A84F06; --gold-soft:#FEF3DC;
+  --pass:#15803D; --pass-soft:#DCFCE7; --fail:#B91C1C; --fail-soft:#FEE2E2;
+  --w2:#BE185D; --w3:#2563EB; --w4:#C2410C; --w5:#0D7A70; --w6:#4D7C0F; --w7:#7C3AED;
+  --shadow:0 1px 2px rgb(15 23 42 / .05), 0 6px 20px rgb(15 23 42 / .05);
+  --f-display:"Lexend","Segoe UI",system-ui,sans-serif;
+  --f-body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  --r-s:8px; --r-m:12px; --r-l:18px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B1120; --surface:#111A2E; --sunk:#172239; --ink:#E5EAF3; --muted:#9DABC2; --line:#24314C;
+  --primary:#7FA9FF; --primary-soft:#1A2850; --on-primary:#0B1120;
+  --gold:#F2B654; --gold-soft:#2A2213;
+  --pass:#4ADE80; --pass-soft:#10281B; --fail:#F87171; --fail-soft:#331517;
+  --w2:#F472B6; --w3:#7FA9FF; --w4:#FB9A5B; --w5:#3CCFC0; --w6:#A3E635; --w7:#B197FC;
+  --shadow:0 1px 2px rgb(0 0 0 / .35);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0B1120; --surface:#111A2E; --sunk:#172239; --ink:#E5EAF3; --muted:#9DABC2; --line:#24314C;
+  --primary:#7FA9FF; --primary-soft:#1A2850; --on-primary:#0B1120;
+  --gold:#F2B654; --gold-soft:#2A2213;
+  --pass:#4ADE80; --pass-soft:#10281B; --fail:#F87171; --fail-soft:#331517;
+  --w2:#F472B6; --w3:#7FA9FF; --w4:#FB9A5B; --w5:#3CCFC0; --w6:#A3E635; --w7:#B197FC;
+  --shadow:0 1px 2px rgb(0 0 0 / .35);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;margin:0;-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--surface)}
+h1,h2,h3,h4{font-family:var(--f-display);line-height:1.2;text-wrap:balance;margin:0;font-weight:600}
+p{margin:0}
+button{font:inherit;color:inherit;touch-action:manipulation}
+svg.i{width:20px;height:20px;flex:none;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+:focus-visible{outline:3px solid var(--primary);outline-offset:2px;border-radius:6px}
+.skip{position:absolute;left:12px;top:-60px;z-index:40;background:var(--primary);color:var(--on-primary);padding:10px 14px;border-radius:var(--r-s);text-decoration:none;font-weight:600}
+.skip:focus{top:calc(env(safe-area-inset-top,0px) + 8px)}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* ---------- header ---------- */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:12px 20px;flex-wrap:wrap;padding-block:10px}
+.brand{display:flex;align-items:center;gap:10px;margin-right:auto;min-width:0}
+.brand .mark{width:36px;height:36px;border-radius:10px;background:var(--primary);color:var(--on-primary);display:grid;place-items:center;flex:none}
+.brand .mark svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.brand h1{font-size:1.05rem;font-weight:700;letter-spacing:-.01em}
+.brand small{display:block;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.06em;color:var(--muted);font-weight:400}
+.tabs{display:flex;gap:4px;background:var(--sunk);padding:4px;border-radius:999px}
+.tabs button{display:flex;align-items:center;gap:8px;border:0;background:transparent;min-height:40px;padding:0 16px;border-radius:999px;cursor:pointer;font-weight:600;font-size:.95rem;color:var(--muted);transition:background .2s var(--ease),color .2s var(--ease)}
+.tabs button svg.i{width:18px;height:18px}
+.tabs button:hover{color:var(--ink)}
+.tabs button[aria-selected="true"]{background:var(--surface);color:var(--primary);box-shadow:var(--shadow)}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;border:1px solid var(--line);background:var(--surface);padding:0 16px;border-radius:var(--r-s);cursor:pointer;font-weight:600;font-size:.95rem;transition:border-color .2s var(--ease),background .2s var(--ease),transform .15s var(--ease)}
+.btn:hover{border-color:var(--primary);color:var(--primary)}
+.btn:active{transform:scale(.98)}
+.btn.primary{background:var(--primary);border-color:var(--primary);color:var(--on-primary)}
+.btn.primary:hover{filter:brightness(1.08);color:var(--on-primary)}
+.btn.ghost{background:transparent}
+.btn svg.i{width:18px;height:18px}
+
+/* ---------- hero ---------- */
+.hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px;align-items:stretch;padding-block:36px 24px}
+.hero-text{display:flex;flex-direction:column;gap:14px;justify-content:center}
+.eyebrow{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--primary);font-weight:600}
+.hero h2{font-size:clamp(1.85rem,4vw,2.75rem);font-weight:700;letter-spacing:-.025em;line-height:1.12}
+.hero h2 em{font-style:normal;color:var(--primary)}
+.hero p{color:var(--muted);max-width:58ch;font-size:1.03rem}
+.hero .row{margin-top:6px}
+.prog-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-l);padding:22px;display:flex;flex-direction:column;gap:18px;box-shadow:var(--shadow)}
+.ring-row{display:flex;align-items:center;gap:18px}
+.ring{width:96px;height:96px;flex:none;position:relative}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring .track{stroke:var(--sunk);fill:none;stroke-width:9}
+.ring .val{stroke:var(--pass);fill:none;stroke-width:9;stroke-linecap:round;transition:stroke-dashoffset .5s var(--ease)}
+.ring b{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--f-display);font-size:1.35rem;font-weight:700;font-variant-numeric:tabular-nums}
+.ring-row h3{font-size:1.05rem}
+.ring-row p{color:var(--muted);font-size:.93rem;margin-top:2px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.stats div{background:var(--sunk);border-radius:var(--r-m);padding:10px 12px;display:flex;flex-direction:column}
+.stats b{font-family:var(--f-display);font-size:1.3rem;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.2}
+.stats span{font-size:.82rem;color:var(--muted)}
+
+/* ---------- week overview ---------- */
+.weekgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding-bottom:12px}
+.wcard.all{background:var(--primary-soft);border-color:transparent;grid-column:1/-1}
+.wcard.all .acts{grid-template-columns:1fr}
+.wcard.all .acts button{background:var(--primary);border-color:var(--primary);color:var(--on-primary)}
+.wcard.all .acts button:hover{filter:brightness(1.08);color:var(--on-primary)}
+.wcard{--wc:var(--w2);background:var(--surface);border:1px solid var(--line);border-radius:var(--r-l);padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.wcard .num{font-family:var(--f-display);font-size:1.75rem;font-weight:700;color:var(--wc);line-height:1;font-variant-numeric:tabular-nums}
+.wcard h3{font-size:1rem;line-height:1.3;flex:1}
+.wcard .meta{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.mini{height:6px;background:var(--sunk);border-radius:99px;overflow:hidden}
+.mini i{display:block;height:100%;width:0;background:var(--wc);border-radius:99px;transition:width .4s var(--ease)}
+.wcard .acts{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.wcard .acts button{min-height:40px;border:1px solid var(--line);background:transparent;border-radius:var(--r-s);cursor:pointer;font-weight:600;font-size:.88rem;transition:border-color .2s,color .2s}
+.wcard .acts button:hover{border-color:var(--wc);color:var(--wc)}
+
+/* ---------- study ---------- */
+.study{display:grid;grid-template-columns:250px minmax(0,1fr);gap:40px;padding-block:28px 96px}
+.rail{position:sticky;top:calc(env(safe-area-inset-top,0px) + 84px);align-self:start;display:flex;flex-direction:column;gap:2px}
+.rail .lbl{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px 12px}
+.rail button{--wc:var(--w2);display:grid;grid-template-columns:10px 1fr auto;gap:10px;align-items:center;text-align:left;border:0;background:transparent;min-height:44px;padding:6px 12px;border-radius:var(--r-s);cursor:pointer;transition:background .2s}
+.rail button:hover{background:var(--surface)}
+.rail .dot{width:10px;height:10px;border-radius:50%;background:var(--wc)}
+.rail .nm{font-size:.9rem;line-height:1.3;font-weight:500}
+.rail .ct{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.rail .ct.done{color:var(--pass);font-weight:600}
+
+.week{--wc:var(--w2);scroll-margin-top:92px;margin-bottom:64px}
+.week-head{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px 20px;padding-bottom:16px;margin-bottom:6px;border-bottom:3px solid var(--wc)}
+.week-head .t{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:6px}
+.week-head .eyebrow{color:var(--wc)}
+.week-head h2{font-size:clamp(1.4rem,2.6vw,1.9rem);font-weight:700;letter-spacing:-.02em}
+.week-head p{color:var(--muted)}
+
+.topic{padding-block:26px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:14px;max-width:800px}
+.topic-h{display:flex;gap:14px;align-items:flex-start}
+.topic-h .no{flex:none;font-family:var(--f-mono);font-size:.78rem;font-weight:600;color:var(--wc);background:color-mix(in srgb,var(--wc) 13%,transparent);border-radius:999px;padding:3px 10px;margin-top:2px;font-variant-numeric:tabular-nums}
+.topic-h h3{font-size:1.22rem;font-weight:600;flex:1;letter-spacing:-.01em}
+.topic h4{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-top:4px}
+.topic ul,.topic ol{margin:0;padding-left:1.25em;display:flex;flex-direction:column;gap:6px}
+.topic li::marker{color:var(--wc)}
+.topic b{font-weight:700}
+.topic code{font-family:var(--f-mono);font-size:.84em;background:var(--sunk);padding:1px 6px;border-radius:5px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pair>div{border:1px solid var(--line);border-radius:var(--r-m);padding:14px 16px;display:flex;flex-direction:column;gap:6px;background:var(--surface);min-width:0}
+.pair>div>b{font-family:var(--f-display);font-size:1rem;font-weight:600}
+.pair>div>span{color:var(--muted);font-size:.95rem}
+.pair .plus{color:var(--pass)} .pair .minus{color:var(--fail)}
+.pair .plus::before{content:"+ "} .pair .minus::before{content:"− "}
+.chain{list-style:none;padding:0 !important;display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px !important}
+.chain.four{grid-template-columns:repeat(4,minmax(0,1fr)) !important}
+.chain li{border:1px solid var(--line);border-radius:var(--r-m);padding:14px;background:var(--surface);display:flex;flex-direction:column;gap:6px}
+.chain li .k{font-family:var(--f-mono);font-size:.72rem;color:var(--wc);letter-spacing:.05em;text-transform:uppercase;font-weight:600}
+.chain li b{font-family:var(--f-display);font-size:1rem;font-weight:600}
+.chain li span:not(.k){font-size:.92rem;color:var(--muted)}
+.steps{list-style:none;padding:0 !important;counter-reset:s;display:flex !important;flex-wrap:wrap;gap:8px !important}
+.steps li{counter-increment:s;display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 14px 5px 6px;font-size:.92rem;font-weight:500}
+.steps li::before{content:counter(s);font-family:var(--f-mono);font-size:.72rem;font-weight:600;background:var(--wc);color:var(--surface);width:24px;height:24px;border-radius:50%;display:grid;place-items:center;flex:none}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-m);background:var(--surface)}
+.tbl table{border-collapse:collapse;width:100%;min-width:520px;font-size:.93rem}
+.tbl th,.tbl td{padding:10px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl th{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--sunk)}
+.tbl td:first-child{font-weight:700}
+.formula{font-family:var(--f-mono);font-size:.98rem;background:color-mix(in srgb,var(--wc) 11%,var(--surface));padding:14px 16px;border-radius:var(--r-m);overflow-x:auto}
+.formula b{color:var(--wc)}
+.hook{display:flex;gap:12px;align-items:flex-start;background:var(--gold-soft);border-radius:var(--r-m);padding:12px 16px;font-size:.96rem;font-weight:500}
+.hook svg.i{color:var(--gold);margin-top:2px}
+.hook .hk{display:block;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;font-weight:600;color:var(--gold);margin-bottom:2px}
+.learn{display:inline-flex;align-items:center;gap:10px;min-height:44px;font-size:.92rem;font-weight:600;color:var(--muted);cursor:pointer;align-self:flex-start;user-select:none;padding:0 14px 0 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface);transition:border-color .2s,color .2s,background .2s}
+.learn input{width:18px;height:18px;accent-color:var(--pass);cursor:pointer;margin:0}
+.learn:hover{border-color:var(--pass)}
+.learn:has(input:checked){color:var(--pass);border-color:var(--pass);background:var(--pass-soft)}
+
+/* ---------- quiz ---------- */
+.panel{max-width:780px;margin:0 auto;padding-block:32px 96px;display:flex;flex-direction:column;gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-l);padding:24px;box-shadow:var(--shadow)}
+.setup h2,.panel-h h2{font-size:1.7rem;font-weight:700;letter-spacing:-.02em;margin-bottom:6px}
+.setup p.sub,.panel-h p{color:var(--muted)}
+.field{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.field .fl{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{--wc:var(--primary);display:inline-flex;align-items:center;gap:6px;min-height:40px;border:1px solid var(--line);background:var(--surface);padding:0 14px;border-radius:999px;cursor:pointer;font-size:.92rem;font-weight:600;transition:all .2s var(--ease)}
+.chip .dot{width:8px;height:8px;border-radius:50%;background:var(--wc)}
+.chip small{font-family:var(--f-mono);color:var(--muted);font-size:.72rem;font-weight:400}
+.chip:hover{border-color:var(--wc)}
+.chip[aria-pressed="true"]{background:var(--wc);color:var(--surface);border-color:var(--wc)}
+.chip[aria-pressed="true"] .dot{background:var(--surface)}
+.chip[aria-pressed="true"] small{color:inherit;opacity:.8}
+.qhead{display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:var(--f-mono);font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.qhead .sc{display:flex;gap:12px}
+.qhead .sc span{display:inline-flex;align-items:center;gap:4px}
+.qhead .sc .p{color:var(--pass)} .qhead .sc .f{color:var(--fail)}
+.qhead svg.i{width:14px;height:14px;stroke-width:2.6}
+.qprog{height:6px;background:var(--sunk);border-radius:99px;overflow:hidden;margin-top:10px}
+.qprog i{display:block;height:100%;background:var(--primary);border-radius:99px;transition:width .3s var(--ease)}
+.qwk{--wc:var(--primary);display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--wc);font-weight:600}
+.qwk::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--wc)}
+.qtext{font-family:var(--f-display);font-size:1.25rem;font-weight:600;line-height:1.4;margin:10px 0 18px;letter-spacing:-.01em}
+.qtext code{font-family:var(--f-mono);font-size:.82em;background:var(--sunk);padding:1px 6px;border-radius:5px;font-weight:400}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{display:grid;grid-template-columns:30px 1fr 22px;gap:12px;align-items:center;text-align:left;min-height:52px;border:1.5px solid var(--line);background:var(--surface);border-radius:var(--r-m);padding:10px 14px;cursor:pointer;font-size:1rem;line-height:1.45;transition:border-color .2s var(--ease),background .2s var(--ease)}
+.opt:hover:not(:disabled){border-color:var(--primary);background:var(--primary-soft)}
+.opt .L{font-family:var(--f-mono);font-size:.8rem;font-weight:600;width:30px;height:30px;border-radius:8px;display:grid;place-items:center;background:var(--sunk);color:var(--muted)}
+.opt .st{display:grid;place-items:center}
+.opt .st svg.i{width:20px;height:20px;stroke-width:2.6}
+.opt:disabled{cursor:default}
+.opt.right{border-color:var(--pass);background:var(--pass-soft)}
+.opt.right .L{background:var(--pass);color:var(--surface)}
+.opt.right .st{color:var(--pass)}
+.opt.wrong{border-color:var(--fail);background:var(--fail-soft)}
+.opt.wrong .L{background:var(--fail);color:var(--surface)}
+.opt.wrong .st{color:var(--fail)}
+.opt.dim{opacity:.5}
+.explain{margin-top:16px;padding:14px 16px;border-radius:var(--r-m);display:flex;gap:12px;align-items:flex-start}
+.explain.ok{background:var(--pass-soft)} .explain.no{background:var(--fail-soft)}
+.explain svg.i{margin-top:2px;stroke-width:2.6}
+.explain.ok svg.i{color:var(--pass)} .explain.no svg.i{color:var(--fail)}
+.explain .v{display:block;font-weight:700;margin-bottom:2px}
+.explain.ok .v{color:var(--pass)} .explain.no .v{color:var(--fail)}
+.qfoot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap}
+.kbd{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.kbd kbd{font-family:inherit;border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:0 5px;background:var(--sunk)}
+.runner{font-family:var(--f-mono);font-size:.88rem;background:var(--sunk);border-radius:var(--r-m);padding:14px 16px;line-height:1.75;overflow-x:auto;white-space:nowrap}
+.runner .p{color:var(--pass);font-weight:600} .runner .f{color:var(--fail);font-weight:600} .runner .m{color:var(--muted)}
+.score{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:8px 0 16px}
+.score .ring{width:110px;height:110px}
+.score .ring b{font-size:1.6rem}
+.score .msg{color:var(--muted);flex:1 1 220px;font-size:1.02rem}
+.score .msg strong{display:block;color:var(--ink);font-family:var(--f-display);font-size:1.15rem;font-weight:600;margin-bottom:2px}
+.miss{display:flex;flex-direction:column;gap:10px}
+.miss .it{border:1px solid var(--line);border-radius:var(--r-m);padding:14px 16px;display:flex;flex-direction:column;gap:8px;background:var(--surface)}
+.miss .it .q{font-weight:600}
+.miss .it .a{font-size:.95rem;display:flex;flex-direction:column;gap:2px}
+.miss .it .a s{color:var(--fail)}
+.miss .it .a .ok{color:var(--pass);font-weight:700}
+.miss .it .e{font-size:.92rem;color:var(--muted)}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+
+/* ---------- cards ---------- */
+.deck{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.fc{--wc:var(--w2);border:1px solid var(--line);background:var(--surface);border-radius:var(--r-l);padding:18px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:10px;min-height:150px;transition:border-color .2s var(--ease),background .2s var(--ease),transform .15s var(--ease)}
+.fc:hover{border-color:var(--wc)}
+.fc:active{transform:scale(.985)}
+.fc .w{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:.68rem;color:var(--wc);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.fc .w::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--wc)}
+.fc .term{font-family:var(--f-display);font-size:1.1rem;font-weight:600;line-height:1.3}
+.fc .def{font-size:.96rem}
+.fc .hint{display:flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:.7rem;color:var(--muted);margin-top:auto}
+.fc .hint svg.i{width:14px;height:14px}
+.fc[aria-expanded="true"]{background:color-mix(in srgb,var(--wc) 9%,var(--surface));border-color:var(--wc)}
+
+/* ---------- kopya kagidi ---------- */
+.cheat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:16px}
+.cheat-card{--wc:var(--primary);background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--wc);border-radius:var(--r-l);padding:20px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow)}
+.cheat-card .ch-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.cheat-card h3{font-size:1.1rem;font-weight:700;display:flex;align-items:center;gap:8px}
+.cheat-card .badge{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--wc);background:color-mix(in srgb,var(--wc) 12%,transparent);padding:3px 9px;border-radius:999px;flex:none}
+.cheat-card ul{margin:0;padding-left:1.15em;display:flex;flex-direction:column;gap:6px;font-size:.93rem}
+.cheat-card li::marker{color:var(--wc)}
+.cheat-card code{font-family:var(--f-mono);font-size:.83em;background:var(--sunk);padding:1px 6px;border-radius:5px}
+.cheat-card .mini-tbl{width:100%;border-collapse:collapse;font-size:.86rem;border:1px solid var(--line);border-radius:var(--r-s);overflow:hidden}
+.cheat-card .mini-tbl th,.cheat-card .mini-tbl td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.cheat-card .mini-tbl tr:last-child td{border-bottom:0}
+.cheat-card .mini-tbl th{background:var(--sunk);font-family:var(--f-mono);font-size:.68rem;text-transform:uppercase;color:var(--muted)}
+.cheat-card .fbox{font-family:var(--f-mono);font-size:.88rem;background:color-mix(in srgb,var(--wc) 11%,var(--surface));padding:10px 12px;border-radius:var(--r-s);font-weight:600}
+.cheat-card .tip{font-size:.88rem;background:var(--gold-soft);color:var(--ink);padding:8px 12px;border-radius:var(--r-s);border-left:3px solid var(--gold)}
+
+@media print{header.top,.no-print{display:none !important}body{background:#fff;color:#000;font-size:13px}.panel{padding-block:0 !important}.cheat-grid{grid-template-columns:repeat(2,1fr);gap:10px}.cheat-card{break-inside:avoid;box-shadow:none;padding:12px}}
+@media (max-width:900px){
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .study{grid-template-columns:minmax(0,1fr);gap:12px}
+  .rail{position:static;flex-direction:row;overflow-x:auto;gap:6px;padding-bottom:6px}
+  .rail .lbl{display:none}
+  .rail button{flex:none;grid-template-columns:10px auto;border:1px solid var(--line);background:var(--surface)}
+  .rail .ct{display:none}
+  .chain.four{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .weekgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .wcard.all{grid-column:1/-1}
+  .pair,.chain,.chain.four{grid-template-columns:1fr !important}
+  .brand small{display:none}
+  .tabs{width:100%}
+  .tabs button{flex:1;justify-content:center;padding:0 8px;font-size:.86rem}
+  .card{padding:18px}
+  .qtext{font-size:1.12rem}
+  .stats b{font-size:1.15rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;scroll-behavior:auto !important}html{scroll-behavior:auto}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
+  <symbol id="i-check-sq" viewBox="0 0 24 24"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7l10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="m6 4 14 8-14 8V4z"/></symbol>
+  <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-redo" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></symbol>
+  <symbol id="i-tap" viewBox="0 0 24 24"><path d="M9 11V5a2 2 0 0 1 4 0v6"/><path d="M13 9a2 2 0 0 1 4 0v3a7 7 0 0 1-7 7h-.5a6 6 0 0 1-5-2.7L3 14a2 2 0 0 1 3.3-2.2L9 15"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+  <symbol id="i-printer" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></symbol>
+  <symbol id="i-scope" viewBox="0 0 24 24"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></symbol>
+</svg>
+</head>
+<body>
+
+<a class="skip" href="#main">İçeriğe geç</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-scope"/></svg></span>
+      <div><h1>Özel Histokimya Teknikleri</h1><small>PLT209 · HAFTA 2–7 · DR. NURHAN ÇON</small></div>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Bölümler">
+      <button role="tab" id="tab-konular" data-view="konular" aria-selected="true"><svg class="i"><use href="#i-book"/></svg>Konular</button>
+      <button role="tab" id="tab-test" data-view="test" aria-selected="false"><svg class="i"><use href="#i-check-sq"/></svg>Test</button>
+      <button role="tab" id="tab-kartlar" data-view="kartlar" aria-selected="false"><svg class="i"><use href="#i-layers"/></svg>Kartlar</button>
+      <button role="tab" id="tab-kopya" data-view="kopya" aria-selected="false"><svg class="i"><use href="#i-zap"/></svg>Kopya Kağıdı</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section id="view-konular" class="wrap">
+    <div class="hero">
+      <div class="hero-text">
+        <span class="eyebrow">OMÜ SHMYO · Patoloji Laboratuvar Teknikleri · PLT209</span>
+        <h2>Tüm boyalar, kontroller ve renkler, <em>sonunda test.</em></h2>
+        <p>Hafta 2’den Hafta 7’ye kadar bütün sunumların özetleri, yöntem karşılaştırma tabloları, pozitif kontroller ve laboratuvar güvenliği kuralları. Okuduğun başlığı “Öğrendim” diye işaretle, sarı kutulardaki sınav kancalarını ezberle ve haftalık testleri çöz.</p>
+        <div class="row">
+          <button class="btn primary" data-go="test"><svg class="i"><use href="#i-play"/></svg>Deneme sınavı</button>
+          <button class="btn" data-go="kartlar"><svg class="i"><use href="#i-layers"/></svg>Kavram kartları</button>
+          <button class="btn" data-go="kopya"><svg class="i"><use href="#i-zap"/></svg>Kopya kağıdı</button>
+        </div>
+      </div>
+      <aside class="prog-card" aria-label="İlerleme">
+        <div class="ring-row">
+          <div class="ring" id="ring"><svg viewBox="0 0 100 100"><circle class="track" cx="50" cy="50" r="42"/><circle class="val" id="ring-val" cx="50" cy="50" r="42" stroke-dasharray="263.9" stroke-dashoffset="263.9"/></svg><b id="ring-pct">%0</b></div>
+          <div><h3>Çalışma ilerlemen</h3><p id="ov-txt">0 başlık öğrenildi</p></div>
+        </div>
+        <div class="stats">
+          <div><b id="st-topics">0</b><span>başlık</span></div>
+          <div><b id="st-qs">0</b><span>soru</span></div>
+          <div><b id="st-cards">0</b><span>kart</span></div>
+        </div>
+      </aside>
+    </div>
+    <div class="weekgrid" id="weekgrid"></div>
+    <div class="study">
+      <nav class="rail" id="rail" aria-label="Haftalar"><div class="lbl">Haftalar</div></nav>
+      <div id="weeks"></div>
+    </div>
+  </section>
+
+  <section id="view-test" class="wrap" hidden>
+    <div class="panel" id="quiz"></div>
+  </section>
+
+  <section id="view-kartlar" class="wrap" hidden>
+    <div class="panel" style="max-width:1120px">
+      <div class="panel-h">
+        <h2>Kavram kartları</h2>
+        <p>Boyayı veya terimi oku, hedefini, pozitif rengini ve kontrol dokusunu aklından söyle, sonra karta dokunup kontrol et.</p>
+      </div>
+      <div class="row" style="align-items:center;justify-content:space-between">
+        <div class="chips" id="card-filter"></div>
+        <div class="row">
+          <button class="btn" id="card-shuffle"><svg class="i"><use href="#i-shuffle"/></svg>Karıştır</button>
+          <button class="btn" id="card-reveal"><svg class="i"><use href="#i-eye"/></svg>Hepsini aç / kapat</button>
+        </div>
+      </div>
+      <div class="deck" id="deck"></div>
+    </div>
+  </section>
+
+  <section id="view-kopya" class="wrap" hidden>
+    <div class="panel" style="max-width:1160px">
+      <div class="row" style="align-items:flex-end;justify-content:space-between;gap:16px">
+        <div class="panel-h">
+          <h2>Kopya Kağıdı · Sınav Öncesi Son Bakış</h2>
+          <p>Hangi boya neyi hangi renge boyar, hangi fiksatif/kesit gerekir, pozitif kontroller ve kritik tuzaklar tek sayfada.</p>
+        </div>
+        <button class="btn no-print" onclick="window.print()"><svg class="i"><use href="#i-printer"/></svg>Yazdır / PDF</button>
+      </div>
+      <div class="row no-print" style="align-items:center;justify-content:space-between">
+        <div class="chips" id="cheat-filter"></div>
+      </div>
+      <div class="cheat-grid" id="cheat-grid"></div>
+    </div>
+  </section>
+</main>
+
+<script>
+/* ===================== İÇERİK (HAFTA 2 - 7) ===================== */
+const WEEKS = [
+{ id:2, label:"Hafta 2", short:"H2", title:"Karbonhidrat, Müsin, Biyolojik Amin ve Melanin Boyaları", sum:"PAS, PAS-Diastaz, Alcian Blue (pH 2,5 / 1,0), AB-PAS, Müsikarmin, Biyolojik Aminler (Kromafin, Argentafin, Arjirofil) ve Melanin.", topics:[
+  { no:"2.1", t:"Karbonhidratlar ve H&E’nin Sınırlılıkları", body:`
+    <p>Karbonhidratlar hücre ve dokularda enerji depolanması (glikojen), hücresel tanınma, adezyon, bariyer oluşumu, salgıların viskoelastik özellikleri ve ekstrasellüler matriks organizasyonu gibi işlevler üstlenir. Histokimya, biyokimyasal ölçümden farklı olarak doku mimarisi korunmuşken molekülün <b>yerleşimi (lokalizasyonu)</b> hakkında bilgi sağlar.</p>
+    <div class="pair">
+      <div><b>Rutin H&E Neden Yetersizdir?</b><span>Genel doku mimarisini gösterir ancak karbonhidrattan zengin maddelerin kimyasal niteliğini ayırt edemez. Müsinler soluk veya köpüksü/boş görünür; suda çözünen glikojen ise fiksasyon ve takip sırasında kısmen kaybolabilir.</span></div>
+      <div><b>Özel Histokimya</b><span>Hedef kimyasal gruplarla kovalent reaksiyona girerek veya elektrostatik (iyonik) bağ kurarak renkli ürün oluşturur. Yorum mutlaka kontrol dokusu, hücresel morfoloji ve gerektiğinde enzim sindirimi (diastaz) ile birlikte yapılmalıdır.</span></div>
+    </div>
+    <div class="tbl"><table>
+      <tr><th>Hedef Madde</th><th>Başlıca Yerleşim / Örnek Organ</th><th>Uygun Yöntem</th><th>Beklenen Sonuç</th></tr>
+      <tr><td>Glikojen</td><td>Karaciğer ve iskelet kası sitoplazması</td><td>PAS ve PAS–Diastaz</td><td>PAS parlak magenta; diastaz sonrası kaybolur</td></tr>
+      <tr><td>Nötral müsin</td><td>Mide yüzey epiteli ve Brunner bezleri</td><td>PAS veya AB–PAS</td><td>Magenta</td></tr>
+      <tr><td>Karboksilli asidik müsin</td><td>Bağırsak ve solunum epiteli (Goblet hücreleri, sialomüsin)</td><td>Alcian Blue pH 2,5</td><td>Mavi / turkuaz</td></tr>
+      <tr><td>Güçlü sülfatlı müsin</td><td>Özellikle bazı kolon müsinleri (sülfomüsin)</td><td>Alcian Blue pH 1,0</td><td>Mavi</td></tr>
+      <tr><td>Bazal membran</td><td>Böbrek glomerülü ve tübüller, fırçamsı kenar</td><td>PAS</td><td>Magenta çizgisel boyanma</td></tr>
+      <tr><td>Epitelyal müsin</td><td>Gastrointestinal epitel, adenokarsinom, <i>Cryptococcus</i></td><td>Müsikarmin</td><td>Koyu pembe / kırmızı</td></tr>
+    </table></div>`,
+    hook:"Glikojen + Nötral müsin + Bazal membran = PAS (Magenta). Asidik müsin = Alcian Blue (Mavi). Epitelyal müsin / Cryptococcus = Müsikarmin (Kırmızı-pembe)." },
+
+  { no:"2.2", t:"Glikojen, Müsinler, Glikoproteinler ve Preanalitik Süreç", body:`
+    <ul>
+      <li><b>Glikojen:</b> Alfa-1,4 glikozidik bağlarla uzayan ve alfa-1,6 bağlarla dallanan glikoz polimeridir. Başlıca karaciğer ve iskelet kasında bulunur (böbrek tübülü, endometrium, vajinal epitel ve bazı tümörlerde de birikebilir). Suda çözünebilir olduğu için uzun süreli sulu fiksasyonda azalabilir; deneysel çalışmalarda alkol bazlı fiksatifler veya hızlı dondurma tercih edilebilir.</li>
+      <li><b>Müsinler:</b> Yüksek molekül ağırlıklı, yoğun O-glikozillenmiş glikoproteinlerdir. <b>Nötral müsinler</b> belirgin anyonik grup taşımaz ve PAS ile magenta boyanır. <b>Asidik müsinler</b> karboksil (<code>-COO⁻</code>, sialomüsin) veya sülfat (<code>-SO₃⁻</code>, sülfomüsin) grupları taşır ve katyonik boyalarla (Alcian Blue) boyanır.</li>
+      <li><b>Glikoproteinler ve Proteoglikanlar:</b> Bazal membran, fırçamsı kenar ve mantar (fungal) hücre duvarlarının PAS pozitifliği glikoprotein/polisakkaritlerle ilişkilidir. Proteoglikanlar ise kıkırdak matriksi, bağ dokusu ve damar duvarında yer alır; sülfatlanmış glikozaminoglikan (GAG) zincirleri Alcian Blue veya metakromatik boyalarla gösterilir.</li>
+      <li><b>Preanalitik Süreç:</b> Parafin kesitlerde <b>3–5 µm</b> kalınlık uygundur. Güçlü asitlerle dekalsifikasyon karbonhidrat yapılarını bozabilir. Eksik deparafinizasyon veya yetersiz rehidrasyon düzensiz/yamalı boyanmaya yol açar.</li>
+    </ul>`,
+    hook:"Sialomüsin = Karboksil (-COO⁻) baskın. Sülfomüsin = Sülfat (-SO₃⁻) baskın. Glikojen suda çözünür!" },
+
+  { no:"2.3", t:"Periodik Asit Schiff (PAS) ve PAS–Diastaz Yöntemi", body:`
+    <p>PAS reaksiyonu (McManus), karbonhidratlardaki <b>komşu karbon atomlarına bağlı hidroksil gruplarının (1,2-glikol)</b> periodik asit (<code>%0,5–1</code>) ile oksidasyonuna dayanır.</p>
+    <ol class="steps"><li>Deparafinizasyon & suya indirme</li><li>Periodik asit oksidasyonu (1,2-glikol → Aldehit)</li><li>Yıkama</li><li>Schiff reaktifi (kükürt dioksitle renksizleştirilmiş bazik fuksin)</li><li>Akarsu yıkaması (parlak magenta kromofor gelişimi)</li><li>Karşıt boya + kapatma</li></ol>
+    <div class="pair">
+      <div><b>PAS ile Pozitif (Magenta) Yapılar</b><span>Glikojen, nötral müsinler, bazı sialomüsinler, bazal membranlar, böbrek tübül fırçamsı kenarı, <b>fungal (mantar) hücre duvarları</b>, bazı glikolipit/glikoprotein inklüzyonları.</span></div>
+      <div><b>PAS–Diastaz (PAS-D) Nasıl Yorumlanır?</b><span>Aynı bloktan alınan ardışık iki kesitten biri doğrudan PAS ile, diğeri <b>alfa-amilaz (diastaz)</b> ile sindirildikten sonra PAS ile boyanır. Enzim glikojendeki alfa-1,4 bağlarını parçalar. <b>PAS(+) iken PAS-D’de boyanma kaybolursa = Glikojen!</b> Boyanma devam ederse diastaza dirençli PAS(+) maddedir (müsin, bazal membran, mantar vb.).</span></div>
+    </div>`,
+    hook:"Periodik asit 1,2-glikolü ALDEHİTE çevirir, Schiff aldehite bağlanıp MAGENTA yapar. Diastazda kaybolan = Glikojen!" },
+
+  { no:"2.4", t:"Alcian Blue (pH Seçiciliği), Kombine AB–PAS ve Müsikarmin", body:`
+    <p><b>Alcian Blue (AB):</b> Merkezinde <b>bakır</b> bulunan ftalosiyanin yapısında, pozitif yüklü (katyonik) bir boyadır. Pozitif yüklü izotiyouronyum grupları, asidik müsinlerin negatif yüklü gruplarıyla elektrostatik bağ kurar. Nötral müsinleri boyamaz.</p>
+    <div class="pair">
+      <div><b>Alcian Blue pH 2,5</b><span>Hem karboksil (<code>COO⁻</code>) hem sülfat (<code>SO₃⁻</code>) grupları iyonize olur. Dolayısıyla <b>hem karboksilli (sialomüsin) hem sülfatlı asidik müsinler mavi</b> boyanır. Kontrol: İnce bağırsak veya kolon goblet hücreleri.</span></div>
+      <div><b>Alcian Blue pH 1,0</b><span>Düşük pH’da karboksil gruplarının iyonizasyonu baskılanır; yalnızca güçlü asidik sülfat grupları iyonize kalır. Sadece <b>güçlü sülfatlı müsinler (sülfomüsin) mavi</b> boyanır.</span></div>
+    </div>
+    <h4>Kombine Alcian Blue – PAS (AB–PAS)</h4>
+    <p>Aynı kesitte asidik ve nötral müsinleri ayırır. Uygulama sırası: <b>Önce Alcian Blue (pH 2,5), ardından PAS!</b></p>
+    <ul>
+      <li><b>Mavi:</b> Sadece asidik müsin</li>
+      <li><b>Magenta:</b> Sadece nötral müsin</li>
+      <li><b>Mor / Koyu mavi:</b> Karışık müsin (hem asidik hem nötral özellik taşıyan)</li>
+    </ul>
+    <h4>Müsikarmin ve Diğer Yöntemler</h4>
+    <ul>
+      <li><b>Müsikarmin:</b> Karmin + alüminyum kompleksidir. Epitelyal asidik müsini <b>koyu pembe / kırmızı</b> gösterir. Müsin üreten adenokarsinomlarda ve <b><i>Cryptococcus neoformans / C. gattii</i></b>’nin kalın polisakkarit kapsülünü göstermede çok değerlidir.</li>
+      <li><b>Best Karmini:</b> Glikojen için tarihsel kırmızı boya (yerini PAS-D’ye bıraktı).</li>
+      <li><b>Kolloidal Demir:</b> Asidik mukosubstanslara bağlanan demirin Prusya mavisiyle gösterilmesi (AB daha kolay standardize edilir).</li>
+      <li><b>Toluidin Mavisi:</b> Sülfatlı GAG’larda (kıkırdak matriksi, mast hücresi) mor-kırmızı <b>metakromazi</b> verir.</li>
+      <li><b>Lektin Histokimyası:</b> Belirli şeker dizilerine bağlanan proteinler; rutin değil araştırma amaçlıdır.</li>
+    </ul>`,
+    hook:"AB pH 2,5 = Karboksilli + Sülfatlı (hepsi). AB pH 1,0 = Sadece Sülfatlı! AB-PAS sırası: Önce AB, sonra PAS. Cryptococcus kapsülü = Müsikarmin." },
+
+  { no:"2.5", t:"Biyolojik Amin ve Melanin Boyaları", body:`
+    <p>Polipeptid hormonları, aktif aminleri veya amin prekürsörlerini (epinefrin, norepinefrin, serotonin) üreten nöroendokrin hücreler gastrointestinal kanalda tek tek veya adrenal medullada gruplar halinde bulunur. Metal iyonlarını (gümüş/bakır) indirgeme yeteneklerine göre 3’e ayrılır:</p>
+    <ol class="chain">
+      <li><span class="k">1 · Dikromat fiksasyonu</span><b>Kromafin</b><span>Adrenal medulla veya paraganglion hücrelerinin granülleri <b>dikromat solüsyonları</b> ile fikse edildiğinde sarı-kahverengi görülür. Yöntemler: <b>Modifiye Giemsa, Schmorl, Wiesel</b>.</span></li>
+      <li><span class="k">2 · Doğrudan indirger</span><b>Argentafin</b><span>Formalin fiksasyonundan sonra dışarıdan indirgeyici gerekmeden metal tuzlarını (amonyaklı gümüşü) doğrudan indirger. <b>Bağırsak karsinoid tümörleri</b> ve <b>melanin</b> ile ilişkilidir. Yöntemler: <b>Fontana-Masson, Diazo tuzları, Schmorl, Otofloresan</b>.</span></li>
+      <li><span class="k">3 · Dış indirgeyici şart</span><b>Arjirofil</b><span>Metal iyonlarına bağlanır ancak metalik gümüşe indirgemek için <b>dışarıdan indirgeyici bir basamak</b> gereklidir. Yöntemler: <b>Grimelius</b> (Bouin fiksatifi tercih edilir) ve <b>Pascual</b>.</span></li>
+    </ol>
+    <h4>Melanin Boyaları</h4>
+    <p>Melanin; saç, deri, retina, iris ve substantia nigra’da normal olarak, <b>malign melanomlarda</b> ise patolojik olarak bulunan, lipit içermeyen, hematojen olmayan kahverengi-siyah bir pigmenttir. <b>Argentafin</b> özelliktedir; <b>Fontana-Masson</b> (siyah) ve <b>Schmorl</b> (mavi-yeşil) metodlarıyla boyanır.</p>`,
+    hook:"Kromafin = Adrenal medulla (dikromat, Wiesel). Argentafin = Kendisi indirger (Karsinoid, Melanin → Fontana-Masson). Arjirofil = İndirgeyici ister (Grimelius - Bouin, Pascual)." }
+]},
+
+{ id:3, label:"Hafta 3", short:"H3", title:"Bağ Dokusu, Yağ, Amiloid ve Sinir Dokusu Boyaları", sum:"Kollajen (Trikrom, Van Gieson, Picrosirius), Elastik ve Retiküler lifler, Lipid boyaları (Oil Red O, Sudan, Osmiyum), Amiloid (Congo Red) ve Nöropatoloji boyaları.", topics:[
+  { no:"3.1", t:"Bağ Dokusu Bileşenleri ve Kollajen Boyaları", body:`
+    <p>Bağ dokusu; <b>lifler</b> (kollajen, elastik, retiküler), <b>hücreler</b> (fibroblast, mezenkimal hücre, mast hücresi, makrofaj, adiposit) ve <b>amorf zemin</b>den (GAG, proteoglikan, glikoprotein, doku sıvısı) oluşur. Trikrom yöntemlerinde asit boyaların doku proteinlerine farklı bağlanma özellikleri ve <b>moleküler büyüklük (geçirgenlik) farkları</b> seçici renklenme sağlar. Fibrozis derecesi, skar dokusu ve kas-kollajen ayrımında kullanılır.</p>
+    <div class="tbl"><table>
+      <tr><th>Yöntem</th><th>Kollajen Rengi</th><th>Kas / Sitoplazma</th><th>Çekirdek</th><th>Önemli Özellik & Kontrol</th></tr>
+      <tr><td>Masson Trikrom</td><td><b>Mavi</b> veya yeşil</td><td>Kırmızı</td><td>Siyah (demirli hematoksilen)</td><td>Anilin mavisi veya ışık yeşili kullanılır</td></tr>
+      <tr><td>Gomori Trikrom</td><td><b>Yeşil</b> veya mavi</td><td>Kırmızı</td><td>Koyu mavi-siyah</td><td>Tek adımda trikrom boyama; kas biyopsisinde de sık kullanılır</td></tr>
+      <tr><td>Van Gieson</td><td><b>Kırmızı</b> (Asit fuksin)</td><td><b>Sarı</b> (Pikrik asit)</td><td>Koyu mavi-siyah</td><td>Elastik lif boyasıyla (Verhoeff) kombine edilebilir</td></tr>
+      <tr><td>Picrosirius Red</td><td><b>Kırmızı</b> (Sirius red)</td><td>Sarımsı</td><td>Boyamaya göre değişir</td><td>Polarize ışıkta kollajen liflerinin <b>çift kırılma</b> özelliğini belirginleştirir (tek başına tipi kesinleştirmez)</td></tr>
+    </table></div>
+    <p><b>Pozitif Kontrol:</b> Deri, tendon veya normal organ stroması.</p>`,
+    hook:"Masson = Kollajen Mavi/Yeşil, Kas Kırmızı. Van Gieson = Kollajen Kırmızı (Asit fuksin), Kas Sarı (Pikrik asit). Picrosirius = Polarize ışıkta çift kırılma!" },
+
+  { no:"3.2", t:"Elastik Lif, Retiküler Lif, Mast Hücresi ve Bazal Membran", body:`
+    <h4>Elastik Lif Boyaları (Aort duvarı, akciğer elastik lifleri, damar duvarı)</h4>
+    <div class="tbl"><table>
+      <tr><th>Yöntem</th><th>Elastik Lif Rengi</th><th>Karşı Boya / Diğer Yapılar</th></tr>
+      <tr><td>Verhoeff–Van Gieson (VVG)</td><td><b>Siyah</b></td><td>Kollajen kırmızı, kas ve diğer dokular sarı</td></tr>
+      <tr><td>Orsein</td><td><b>Kahverengi – koyu kahverengi</b></td><td>Zemin yönteme göre değişir</td></tr>
+      <tr><td>Weigert Resorsin Fuksin</td><td><b>Mor – koyu mor</b></td><td>Karşı boya protokole bağlı</td></tr>
+      <tr><td>Gomori Aldehit Fuksin</td><td><b>Mor</b></td><td>Bazı sülfatlanmış mukosubstanslar da boyanabilir</td></tr>
+    </table></div>
+    <div class="pair">
+      <div><b>Retiküler Lifler (Tip III Kollajen Ağı)</b><span>Gümüş iyonlarını doğrudan metalik gümüşe indirgeyemez; dışarıdan indirgeme basamağı (formalin vb.) gerektiği için <b>arjirofilik</b> olarak tanımlanır. <b>Gomori</b> ve <b>Gordon-Sweets</b> gümüşleme yöntemlerinde sırasıyla: <i>oksidasyon → sensitizasyon (duyarlılaştırma) → gümüşleme → indirgeme → tonlama (altın klorür)</i> basamakları bulunur. Karaciğer mimarisi (siroz/nekroz) ve kemik iliği fibrozisinde siyah lifler olarak izlenir.</span></div>
+      <div><b>Mast Hücresi & Bazal Membran</b><span><b>Mast hücresi granülleri</b> yoğun sülfatlanmış GAG (heparin) içerir; <b>Toluidin mavisi</b> gibi bazik boyalarla boya agregasyonu sonucu <b>mor-kırmızı metakromazi</b> gösterir (Deri iç kontrol sağlar). <b>Bazal membran</b> (Tip IV kollajen ve laminin) ise <b>PAS</b> (magenta) ve gümüşleme (Jones PAM) ile gösterilir.</span></div>
+    </div>`,
+    hook:"Verhoeff = Elastik SİYAH. Orsein = KAHVERENGİ. Weigert/Gomori aldehit = MOR. Retiküler lif = Tip III kollajen, ARJİROFİLİK (Gomori / Gordon-Sweets)." },
+
+  { no:"3.3", t:"Yağ (Lipid) Boyaları ve Doku Hazırlama İlkesi", body:`
+    <p><b>Kritik Preanalitik İlke:</b> Rutin parafin doku takibinde kullanılan <b>alkol ve ksilen (organik çözücüler) nötral lipidleri çözer ve uzaklaştırır!</b> Bu nedenle rutin H&E parafin kesitlerde yağ damlacıkları <b>boş vakuoller</b> halinde görülür.</p>
+    <div class="pair">
+      <div><b>Uygun Örnek ve İşlem</b><span>Taze doku veya kısa süreli formalin fikse dokudan alınan <b>kriyostat (dondurulmuş / frozen) kesit</b> şarttır. Alkol-ksilen basamağı yoktur ve <b>suda çözünür (sulu) kapatma ortamı</b> (gliserin jelatin vb.) kullanılır. Boyama kovalent kimyasal reaksiyonla değil, yağda çözünen boyanın sulu-alkollü çözücüden <b>doku lipidi fazına fiziksel çözünmesiyle</b> gerçekleşir.</span></div>
+      <div><b>İstisna: Osmiyum Tetroksit (OsO₄)</b><span>Doymamış yağ asidi çift bağlarıyla kimyasal reaksiyona girerek siyah osmiyum dioksit oluşturur; lipidi <b>hem fikse eder hem siyaha boyar</b>. Bu sayede parafin takibine girebilir. Ancak buharı kornea (göz) ve solunum sistemi için <b>çok toksik ve uçucu</b> olduğundan mutlaka <b>çeker ocakta</b> çalışılmalıdır.</span></div>
+    </div>
+    <div class="tbl"><table>
+      <tr><th>Yöntem</th><th>Başlıca Hedef</th><th>Pozitif Görünüm</th><th>Örnek Tipi & Kullanım</th></tr>
+      <tr><td>Oil Red O</td><td>Nötral trigliserid ve lipidler</td><td><b>Parlak Kırmızı</b></td><td>Taze dondurulmuş kesit · Karaciğer steatozu (yağlanma), yağ embolisi</td></tr>
+      <tr><td>Sudan Black B</td><td>Nötral lipid ve bazı <b>fosfolipidler</b></td><td><b>Mavi – Siyah</b></td><td>Dondurulmuş kesit · Yağ embolisi, hematolojik sitokimya</td></tr>
+      <tr><td>Sudan III / IV</td><td>Nötral lipid</td><td><b>Turuncu – Kırmızı</b></td><td>Dondurulmuş kesit · Klasik eğitim uygulaması</td></tr>
+      <tr><td>Osmiyum Tetroksit</td><td>Doymamış lipid bağları ve miyelin</td><td><b>Siyah</b></td><td>Özel fikse doku · Periferik sinir biyopsisi, elektron mikroskopisi</td></tr>
+      <tr><td>Nile Red</td><td>Hidrofobik lipid ortamı</td><td>Floresans</td><td>Araştırma ve özel uygulama</td></tr>
+    </table></div>`,
+    hook:"Yağ boyası = Taze donmuş kesit + Sulu kapatma! Oil Red O = Kırmızı, Sudan III/IV = Turuncu-kırmızı, Sudan Black B = Mavi-siyah, Osmiyum = Siyah (hem fiksatif hem boya, çok toksik!)." },
+
+  { no:"3.4", t:"Amiloid ve Congo Red Boyaması", body:`
+    <p><b>Amiloid:</b> Yanlış katlanmış proteinlerin <b>beta-pileli tabaka (β-pleated sheet)</b> yapısında fibriller halinde <b>ekstrasellüler (hücre dışı)</b> birikimidir. Rutin H&E kesitte <b>amorf, homojen, eozinofilik (pembe)</b> hücre dışı materyal olarak görülür (hiyalin ile karışabilir, H&E tek başına özgül değildir).</p>
+    <ul class="chain four">
+      <li><span class="k">1 · İlke</span><b>Congo Red Bağlanması</b><span>Uzun Congo red molekülleri, beta tabakalı amiloid fibrillerine paralel ve düzenli biçimde bağlanır.</span></li>
+      <li><span class="k">2 · Işık Mikroskobu</span><b>Somon – Pembe / Kırmızı</b><span>Normal aydınlık alan ışık mikroskobunda amiloid birikimi somon-pembe ile kırmızı arasında görünür.</span></li>
+      <li><span class="k">3 · Polarize Işık</span><b>Elma Yeşili Çift Kırılma</b><span>Çapraz polarizör altında karakteristik <b>elma yeşili çift kırılma (birefringence)</b> tanısal doğrulayıcıdır.</span></li>
+      <li><span class="k">4 · Kesit Kalınlığı</span><b>8 – 10 µm Kesit</b><span>Rutin kesitten (3-5 µm) daha kalın olan <b>8–10 µm</b> kesit, çift kırılmanın görülmesini kolaylaştırır!</span></li>
+    </ul>
+    <div class="tbl"><table>
+      <tr><th>Tamamlayıcı Yöntem</th><th>Pozitif Görünüm</th><th>Temel Sınırlılık</th></tr>
+      <tr><td>Thioflavin T / S</td><td>Sarı-yeşil floresans</td><td>Floresans mikroskobu gerekir, özgüllüğü düşüktür (zemin kontrolü şart)</td></tr>
+      <tr><td>Kristal Viyole / Metil Viyole</td><td>Metakromatik mor-kırmızı renk değişimi</td><td>Congo red kadar doğrulayıcı ve duyarlı değildir</td></tr>
+      <tr><td>Direct Fast Scarlet</td><td>Kırmızı birikim ve çift kırılma</td><td>Protokol standardizasyonu gerekir</td></tr>
+      <tr><td>Potasyum Permanganat Ön İşlemi</td><td>Bazı AA amiloid birikimlerinde Congo red boyanması azalır</td><td><b>Güncel tiplendirme için yeterli değildir!</b> (Kesin tiplendirme İHK veya kütle spektrometrisi ile yapılır)</td></tr>
+    </table></div>`,
+    hook:"Amiloid = Beta tabakalı ekstrasellüler fibril. Congo Red = 8–10 µm kalın kesit, normal ışıkta Somon-Kırmızı, polarize ışıkta ELMA YEŞİLİ çift kırılma! Boya amiloidin varlığını gösterir, protein tipini (AA/AL) kesinleştirmez." },
+
+  { no:"3.5", t:"Sinir Dokusu Boyaları ve Kalite Kontrol / Güvenlik", body:`
+    <p>Sinir dokusu kontrol kesitinde <b>gri ve beyaz cevherin birlikte bulunması</b> yorum gücünü artırır.</p>
+    <div class="tbl"><table>
+      <tr><th>Hedef Yapı</th><th>Yöntem / Boya</th><th>İlke ve Beklenen Görünüm</th></tr>
+      <tr><td><b>Nöron Gövdesi (Nissl Cisimcikleri)</b></td><td><b>Krezil Viyole</b> (Cresyl Echt Violet), Toluidin mavisi, Tionin</td><td>Nissl maddesi (granüllü ER ve ribozomlar / rRNA) asidiktir; bazik boyalarla <b>mor-mavi</b> boyanır. Nöron yoğunluğu ve <b>kromatoliz</b> (hasarda Nissl kaybı) değerlendirilir.</td></tr>
+      <tr><td><b>Miyelin Kılıfı</b></td><td><b>Luxol Fast Blue (LFB)</b><br><b>Osmiyum Tetroksit</b></td><td><b>LFB:</b> Miyelin fosfolipitlerine/lipoproteinlerine bağlanır → <b>Mavi-turkuaz</b> (Krezil viyole karşı boyasıyla nöronlar mor; demiyelinizasyonda mavi kaybolur). Kritik basamak <b>lityum karbonat ile diferansiyasyondur</b>.<br><b>Osmiyum:</b> Doymamış miyelin lipidlerini <b>siyah</b> boyar (yarı ince reçine kesitlerde Toluidin mavisi ile birlikte).</td></tr>
+      <tr><td><b>Akson ve Nörofibriller</b></td><td><b>Bielschowsky</b><br><b>Bodian</b> gümüşleme</td><td><b>Bielschowsky:</b> Akson, nörofibril, Alzheimer’da <b>senil plak ve nörofibriler yumakları</b> siyah gösteren gümüş impregnasyonudur.<br><b>Bodian:</b> <b>Protargol</b> (gümüş proteinat) temelli gümüşleme yöntemidir.</td></tr>
+      <tr><td><b>Glial Lifler (Astrosit / Gliozis)</b></td><td><b>PTAH</b> (Fosfotungstik Asit Hematoksilen)</td><td>Glial fibrilleri, <b>çizgili kas</b> çapraz çizgilenmesini ve <b>fibrini</b> mavi-mor tonlarda boyar. Güncel rutinde glial lifler için İHK (GFAP) tercih edilir.</td></tr>
+    </table></div>
+    <h4>Hafta 3 Laboratuvar Güvenliği ve Sık Sorunlar</h4>
+    <ul>
+      <li><b>Pikrik asit (Van Gieson, Bouin):</b> Kuruduğunda <b>patlayıcıdır!</b> Asla kurutulmaz, nemli saklanır.</li>
+      <li><b>Osmiyum tetroksit:</b> Uçucu ve kornea/solunum için ağır toksiktir; mutlaka <b>çeker ocakta</b> çalışılır.</li>
+      <li><b>Gümüş ve kromlu atıklar:</b> Lavaboya dökülmez, ağır metal atık kaplarında ayrı toplanır (Gümüş çözeltileri bekletilirse patlayıcı bileşikler oluşturabilir, cam malzemeler çok temiz olmalıdır).</li>
+    </ul>`,
+    hook:"Nissl (rRNA) = Krezil viyole (Mor). Miyelin = Luxol Fast Blue (Mavi). Akson/Plak/Yumak = Bielschowsky & Bodian (Protargol). Glial lif/Fibrin = PTAH. Pikrik asit KURUTULMAZ (patlar)!" }
+]},
+
+{ id:4, label:"Hafta 4", short:"H4", title:"Sitoplazmik Birikimler ve Pigmentler", sum:"Endojen (Hematojen: Hemosiderin, Safra, Porfirin; Nonhematojen: Melanin, Lipofuskin), Eksojen (Karbon, Dövme, Asbest, Silika), Artefakt pigmentleri ve Mineraller (Kalsiyum, Bakır, Ürat).", topics:[
+  { no:"4.1", t:"Pigmentlerin Sınıflandırılması ve H&E ile İlk Değerlendirme", body:`
+    <p>Her sitoplazmik birikim doğal renk taşımaz (glikojen, yağ, hiyalin renksizdir); doğal renk taşıyan maddelere <b>pigment</b> denir. Özel boya seçimi H&E kesitte renk, granül boyutu, hücre içi/dışı yerleşim, taşıyan hücre tipi ve doku takip/fiksatif öyküsüyle başlar. <i>Kesit yüzeyindeki düzensiz ve odak dışı (farklı optik düzlemdeki) tanecikler boya çökeltisi artefaktını düşündürür.</i></p>
+    <div class="tbl"><table>
+      <tr><th>Ana Grup</th><th>Alt Grup</th><th>Örnekler</th></tr>
+      <tr><td><b>Endojen</b> (Vücut içi)</td><td><b>Hematojen</b> (Kan türevi)</td><td>Hemoglobin, <b>Hemosiderin</b>, <b>Safra (Bilirubin/Hematoidin)</b>, Porfirin</td></tr>
+      <tr><td><b>Endojen</b> (Vücut içi)</td><td><b>Nonhematojen</b></td><td><b>Melanin</b>, <b>Lipofuskin</b>, Seroid, Kromafin</td></tr>
+      <tr><td><b>Eksojen</b> (Dış kaynaklı)</td><td>İnhale veya implante</td><td><b>Karbon (Antrakoz)</b>, <b>Asbest</b>, <b>Silika / Talk</b>, Dövme (Tatuaj) pigmenti</td></tr>
+      <tr><td><b>Artefakt</b> (İşlem kaynaklı)</td><td>Fiksatif veya boya kaynaklı</td><td><b>Asit formalin hematini</b>, Cıva pigmenti (Zenker/B5), Krom pigmenti, Boya çökeltisi</td></tr>
+      <tr><td><b>Pigment Dışı Birikimler</b></td><td>Karbonhidrat, lipid, protein, mineral</td><td>Glikojen, Nötral yağ, Hiyalin, <b>Kalsiyum</b>, <b>Ürat kristalleri</b>, <b>Bakır</b></td></tr>
+    </table></div>`,
+    hook:"Hematojen = Hemosiderin, Safra, Porfirin. Nonhematojen = Melanin, Lipofuskin. Odak dışı düzensiz tanecik = Boya çökeltisi artefaktı!" },
+
+  { no:"4.2", t:"Hematojen Pigmentler: Hemosiderin (Perls), Safra (Hall–Fouchet) ve Porfirin", body:`
+    <h4>1. Hemosiderin ve Perls Prusya Mavisi</h4>
+    <p>Hemosiderin, H&E’de makrofajlar veya parankim hücreleri içinde <b>altın kahverengi kaba granüller</b> oluşturur (lokal kanama, konjesyon, hemosiderozis veya sistemik doku hasarlı hemokromatozis).</p>
+    <ol class="steps"><li>1. HCl (Hidroklorik asit): Proteine (apoferritine) bağlı <b>Fe³⁺ (ferrik demir)</b> iyonlarını açığa çıkarır</li><li>2. Potasyum ferrosiyanür: Açığa çıkan Fe³⁺ ile reaksiyona girer</li><li>3. <b>Koyu mavi</b> çözünmez <b>ferrik ferrosiyanür (Prusya mavisi)</b> çökeltisi oluşur</li><li>4. Kontrol: Hemosiderin içeren karaciğer, dalak veya kemik iliği</li></ol>
+    <p><b>Kritik Sınır:</b> Perls yalnızca gevşek bağlı <b>ferrik (Fe³⁺)</b> demiri boyar; hemoglobindeki veya miyoglobindeki sıkı bağlı (maskeli) demiri <b>doğrudan boyamaz!</b></p>
+    <div class="pair">
+      <div><b>2. Safra Pigmenti (Bilirubin) ve Hall–Fouchet</b><span>H&E’de sarı-kahverengi/yeşilimsi tıkaçlar halindedir. <b>Hall (Fouchet)</b> yönteminde Fouchet reaktifi (trikloroasetik asit + ferrik klorür) bilirubini <b>biliverdine oksitler</b> → Pozitif sonuç <b>zümrüt yeşili / zeytin yeşili</b>dir. Kontrol: Kolestatik karaciğer.</span></div>
+      <div><b>3. Porfirinler</b><span>Porfiri hastalıklarında birikir. Taze veya dondurulmuş (frozen) kesitte <b>UV (floresans) mikroskobu altında parlak kırmızı otofloresans</b> verir (floresans hızla solar).</span></div>
+    </div>`,
+    hook:"Perls = HCl + Potasyum ferrosiyanür → Fe³⁺ (Hemosiderin) KOYU MAVİ (Hemoglobini boyamaz!). Hall-Fouchet = Bilirubin → Biliverdin (YEŞİL). Porfirin = UV'de KIRMIZI floresans." },
+
+  { no:"4.3", t:"Nonhematojen Pigmentler: Melanin ve Lipofuskin / Seroid", body:`
+    <div class="pair">
+      <div><b>Melanin (Fontana–Masson & Ağartma)</b><span>H&E’de kahverengi-siyah ince granüllerdir. <b>Fontana–Masson</b> yöntemi melaninin <b>argentafin</b> özelliğine dayanır: melanin amonyaklı gümüş nitratı dışarıdan indirgeyici olmadan doğrudan <b>siyah</b> metalik gümüşe indirger. Ancak Fontana–Masson tek başına özgül değildir (nöroendokrin granüller ve lipofuskin de pozitif olabilir). Doğrulama için <b>Bleaching (ağartma)</b> yapılır: <b>potasyum permanganat + oksalik asit</b> veya hidrojen peroksit gibi güçlü oksidanlarla melanin rengi <b>kaybolur (ağarır)</b>; karbon ise ağarmaz!</span></div>
+      <div><b>Lipofuskin ve Seroid (Yıpranma / Yaşlılık Pigmenti)</b><span>Lizozomal sindirilemeyen lipid/protein artık cisim (wear-and-tear) pigmentidir. Kalp kası, hepatosit ve nöronlarda <b>perinükleer (çekirdek çevresi) sarı-kahverengi</b> ince granüller olarak görülür.<br>• <b>Schmorl yöntemi:</b> Mavi-yeşil<br>• <b>Sudan Black B:</b> Mavi-siyah<br>• <b>PAS ve Ziehl-Neelsen (Asit-fast, özellikle seroid):</b> Pozitif<br>• <b>UV altında:</b> Sarı-turuncu otofloresans verir.</span></div>
+    </div>`,
+    hook:"Melanin = Fontana-Masson (Siyah, argentafin) + Bleaching (Ağartma) ile KAYBOLUR! Lipofuskin = Perinükleer yaşlılık pigmenti; Schmorl (Mavi-yeşil), Sudan Black B (Mavi-siyah), Sarı-turuncu otofloresans." },
+
+  { no:"4.4", t:"Ürat Kristalleri, Kalsiyum (Von Kossa vs Alizarin) ve Bakır", body:`
+    <h4>1. Ürat Kristalleri (Gut Hastalığı – Tofüs)</h4>
+    <p><b>Preanalitik Tuzak:</b> Monosodyum ürat kristalleri suda çözünür! Bu nedenle <b>sulu formalinden kaçınılır; %95 etanol veya mutlak (absolü) alkol</b> ile fikse edilir. Formalinle gönderilen dokuda kristaller erir, sadece yabancı cisim dev hücreleriyle çevrili <b>boş kristal yarıkları</b> kalır. Alkol fikse kesitte iğne biçimli kristaller <b>polarize ışıkta güçlü negatif çift kırılma</b> (kırmızı kompansatörde yöne göre sarı-mavi renk) gösterir.</p>
+    <h4>2. Kalsiyum Birikimleri: Von Kossa ve Alizarin Red S Farkı</h4>
+    <div class="pair">
+      <div><b>Von Kossa (Gümüşleme – Dolaylı)</b><span><b>Kalsiyumu doğrudan göstermez!</b> Kalsiyuma bağlı <b>fosfat ve karbonat anyonlarını</b> gösterir. Gümüş nitrat fosfat/karbonatla birleşir ve ışık/indirgeyici ile <b>siyah</b> metalik gümüşe dönüşür.</span></div>
+      <div><b>Alizarin Red S (Doğrudan Şelasyon)</b><span>Yaklaşık <b>pH 4,2–4,5</b>’te doğrudan <b>kalsiyum katyonlarıyla (Ca²⁺)</b> şelat kompleksi oluşturur. Pozitif sonuç <b>turuncu-kırmızı</b> çökeltidir (Asit dekalsifikasyon kalsiyumu siler!).</span></div>
+    </div>
+    <h4>3. Bakır Birikimi (Wilson Hastalığı)</h4>
+    <ul>
+      <li><b>Rhodanine (Rodanin):</b> Bakırı <b>turuncu-kırmızı / kırmızı-kahverengi</b> granüller halinde gösterir.</li>
+      <li><b>Rubeanik Asit:</b> Bakırı <b>yeşilimsi siyah</b> gösterir. (Orsein ve Viktorya mavisi ise bakır bağlayan proteini dolaylı boyar).</li>
+    </ul>`,
+    hook:"Ürat = ALKOL fiksasyonu + Polarize ışık (Formalinde erir!). Von Kossa = Kalsiyumu değil FOSFAT/KARBONAT anyonunu SİYAH boyar. Alizarin Red S = Doğrudan KALSİYUMU Turuncu-Kırmızı boyar. Bakır = Rodanin (Kırmızı), Rubeanik asit (Yeşil-siyah)." },
+
+  { no:"4.5", t:"Eksojen Partiküller, Artefakt Pigmentleri ve Kalite Güvencesi", body:`
+    <h4>Eksojen Pigmentler</h4>
+    <ul>
+      <li><b>Karbon (Antrakoz):</b> Akciğer alveoler makrofajlarında ve lenf düğümlerinde siyah granüller. <b>Perls negatiftir ve bleaching (ağartma) ile kaybolmaz!</b></li>
+      <li><b>Dövme (Tatuaj) Pigmenti:</b> Dermal makrofajlarda ve kollajen çevresinde; klinik öykü belirleyicidir.</li>
+      <li><b>Asbest ve Ferruginöz Cisimler:</b> İnhale edilen liflerin makrofajlarca demir-protein kılıfıyla kaplanmasıyla <b>altın kahverengi, çomak veya boncuklu/halter (dumb-bell)</b> görünüm oluşur. Demir kaplama nedeniyle <b>Perls Prusya mavisi pozitiftir!</b> <i>(Dikkat: Her ferruginöz cisim asbest değildir; kesin bileşim için SEM–EDS gerekir).</i></li>
+      <li><b>Silika ve Talk:</b> Sıklıkla renksiz kristallerdir; <b>polarize ışıkta parlak çift kırılma</b> gösterir.</li>
+    </ul>
+    <h4>Artefakt Pigmentleri (İşlem Kaynaklı – Gerçek Patolojiyi Taklit Eder)</h4>
+    <div class="tbl"><table>
+      <tr><th>Artefakt Pigmenti</th><th>Neden ve Görünüm</th><th>Önleme veya Düzeltme (Giderme)</th></tr>
+      <tr><td><b>Asit Formalin Hematini</b></td><td>Tamponlanmamış asidik formalinde (pH &lt; 6) kan zengini dokularda koyu kahverengi-siyah, çift kırıcılı çökelti</td><td><b>Nötral tamponlu formalin (%10 NBF, pH 7,0-7,2)</b> kullanmak; oluşmuşsa pikrik asitli alkol ile gidermek</td></tr>
+      <tr><td><b>Cıva Pigmenti</b></td><td>Cıva klorürlü fiksatif (Zenker, B5) sonrası yaygın kahverengi-siyah granül</td><td>Kesitlere boyama öncesi <b>Lugol iyot ve sodyum tiyosülfat</b> işlemi uygulamak</td></tr>
+      <tr><td><b>Krom Pigmenti</b></td><td>Potasyum dikromatlı fiksatif sonrası sarı-kahverengi çökelti</td><td>Fiksasyon sonrası dokuyu <b>bol akarsuda iyi yıkamak</b></td></tr>
+      <tr><td><b>Boya Çökeltisi</b></td><td>Kesit yüzeyinde düzensiz, odak dışı tanecikler</td><td>Boyayı kullanmadan önce <b>süzmek (filtrelemek)</b> ve temiz kap kullanmak</td></tr>
+    </table></div>
+    <p><b>Kalite Güvencesi Altın Kuralı:</b> Hasta lamıyla aynı koşulda çalışılan <b>pozitif kontrol boyanmadıysa (negatifse) hasta sonucu asla yayımlanmaz/raporlanmaz!</b> Reaktif, pH ve süre kontrol edilip işlem tekrarlanır.</p>`,
+    hook:"Karbon = Ağarmaz, Perls(-). Ferruginöz cisim (Asbest) = Halter şekilli, Perls(+)! Asit formalin hematini → Nötral tamponlu formalinle önlenir. Cıva pigmenti → İyot + Tiyosülfat ile silinir." }
+]},
+
+{ id:5, label:"Hafta 5", short:"H5", title:"Enzim Histokimyası I: Temel İlkeler ve Fosfatazlar", sum:"Enzim aktivitesi vs İHK, dondurulmuş doku (soğuk izopentan), reaksiyon sistemleri (metal yakalama, azo, tetrazolyum), kontroller, ALP ve ACP.", topics:[
+  { no:"5.1", t:"Enzim Histokimyası İlkesi, Sınıflar ve Hücre İçi Dağılım", body:`
+    <p><b>En Temel Ayrım:</b> <b>Enzim histokimyası</b> enzimin uygun koşullarda gerçekleştirdiği <b>katalitik aktiviteyi (işlevi)</b> gösterir; <b>immünohistokimya (İHK)</b> ise enzim aktif olmasa bile <b>enzim proteininin varlığını (antijenini)</b> gösterir! Enzim histokimyasının en güçlü rutin uygulama alanı <b>kas biyopsileridir</b>.</p>
+    <ul>
+      <li><b>Reaksiyon Öğeleri:</b> <b>Enzim</b> (yapısal bütünlüğü korunmuş biyolojik katalizör) + <b>Substrat</b> + <b>Kofaktör</b> → <b>Çözünmez ve renkli reaksiyon ürünü</b>. Ürün tam enzimin bulunduğu yerde çökmelidir; <b>ürün difüzyonu</b> yanlış lokalizasyona yol açar.</li>
+      <li><b>Rutin Patolojide En Çok Kullanılan 2 Enzim Sınıfı:</b> <b>1) Hidrolazlar</b> (su ekleyerek bağ kıranlar: fosfatazlar, esterazlar, peptidazlar) ve <b>2) Oksidoredüktazlar</b> (elektron/hidrojen aktaranlar: SDH, COX, NADH-TR, peroksidaz).</li>
+    </ul>
+    <ul class="chain four">
+      <li><span class="k">Çekirdek</span><b>Kromatin / Matriks</b><span>DNA ve RNA metabolizması enzimleri</span></li>
+      <li><span class="k">Mitokondri</span><b>SDH ve COX</b><span>Hücresel solunum ve enerji metabolizması</span></li>
+      <li><span class="k">Lizozom</span><b>Asit Fosfataz (ACP)</b><span>Hidrolitik yıkım, glikozidaz ve peptidazlar</span></li>
+      <li><span class="k">Membran / ER</span><b>Alkalen Fosfataz (ALP)</b><span>Hücre membranı (fırçamsı kenar), mikrozomal (G6Paz)</span></li>
+    </ul>`,
+    hook:"Enzim histokimyası = KATALİTİK AKTİVİTE (taze donmuş doku şart). İHK = ENZİM PROTEİNİ. Rutinde en çok Hidrolazlar ve Oksidoredüktazlar kullanılır." },
+
+  { no:"5.2", t:"Doku İşlemlerinin Aktiviteye Etkisi ve Taze Dondurulmuş Doku İş Akışı", body:`
+    <p>Rutin parafin takibindeki oda sıcaklığında uzun formalin fiksasyonu (protein çapraz bağlanması), alkol dehidrasyonu, ksilen ve <b>56–60 °C sıcak parafin</b> birçok enzimi <b>denatüre ve inaktive eder</b>. Bu nedenle enzim histokimyasında temel örnek <b>taze dondurulmuş (fresh frozen) kriyostat kesitidir (7–10 µm)</b>.</p>
+    <ol class="steps"><li>Örnek kabulü (gecikmeden)</li><li>Doğru yönlendirme (kas lifleri enine kesilecek şekilde)</li><li><b>Sıvı azotla soğutulmuş izopentanda</b> hızlı dondurma</li><li>7–10 µm kriyostat kesiti</li><li>Seri kesit ve kontrol</li><li>Gecikmeden inkübasyon</li></ol>
+    <p><b>Kritik Laboratuvar Uyarısı:</b> Kas biyopsisini doğrudan sıvı azota atmak çevresinde gaz zarfı (Leidenfrost etkisi) oluşturarak yavaş/eşitsiz donmaya, <b>buz kristali (çatlak/kabarcık/delik) artefaktına</b> yol açar! Bu yüzden <b>sıvı azotla (~ -150/-160 °C) soğutulmuş izopentan (2-metilbütan)</b> içinde kontrollü hızlı dondurma yapılır.</p>`,
+    hook:"Kas dokusu doğrudan sıvı azota ATILMAZ (çatlak/buz artefaktı yapar)! Sıvı azotla soğutulmuş İZOPENTAN içinde hızla dondurulur." },
+
+  { no:"5.3", t:"Görünür Reaksiyon Ürünü Oluşum Sistemleri ve Kontrol Sistemi", body:`
+    <div class="tbl"><table>
+      <tr><th>Reaksiyon Sistemi</th><th>Temel Mekanizma</th><th>Örnek Enzimler</th></tr>
+      <tr><td><b>Metal Yakalama (Presipitasyon)</b></td><td>Substrattan kopan iyon (ör. fosfat) ortamdaki metal tuzuyla (kalsiyum, kobalt, kurşun) yakalanır, sülfidle siyah/kahverengi çökeltiye dönüştürülür</td><td>Gomori ALP, Gomori ACP, Miyofibriller ATPaz, 5'-NT, G6Paz</td></tr>
+      <tr><td><b>Azo Eşleşmesi (Coupling)</b></td><td>Substrattan açığa çıkan naftol ürünü, diazonyum tuzuyla birleşerek çözünmez renkli azo boya oluşturur</td><td>Alkalen fosfataz, Asit fosfataz, Nonspesifik esterazlar</td></tr>
+      <tr><td><b>Tetrazolyum İndirgenmesi</b></td><td>Substrattan alınan elektronlar renksiz tetrazolyum tuzunu (NBT/MTT) çözünmeyen mavi/mor <b>formazan</b> çökeltisine indirger</td><td>NADH-TR, SDH, LDH (Dehidrogenazlar)</td></tr>
+      <tr><td><b>İndoksil Oksidasyonu</b></td><td>İndoksil türevi oksitlenerek mavi indigo boyası verir</td><td>Bazı esteraz yöntemleri (İndoksil asetat)</td></tr>
+      <tr><td><b>Doğrudan Oksidasyon</b></td><td>Kromojen (ör. DAB, DOPA) enzim etkisiyle doğrudan renkli çözünmez ürüne oksitlenir</td><td>Peroksidaz (MPO), Sitokrom c oksidaz (COX), Tirozinaz</td></tr>
+    </table></div>
+    <h4>Enzim Histokimyasında Kontrol Sistemi (Hangi Kontrol Neyi Yanıtlar?)</h4>
+    <ul>
+      <li><b>Bilinen pozitif doku:</b> Reaktif ve inkübasyon sistemi çalıştı mı?</li>
+      <li><b>İç pozitif kontrol (ör. damar duvarı):</b> Hasta kesitinde enzim aktivitesi korunmuş mu?</li>
+      <li><b>Substratsız kontrol (inkübasyon ortamına substrat konmaz):</b> Kromojen/reaktif substrattan bağımsız olarak nonspesifik çöktü mü?</li>
+      <li><b>Isıyla inaktive edilmiş kesit:</b> Görülen boyanma gerçekten enzimatik (katalitik) aktiviteye mi bağlı?</li>
+      <li><b>Özgül inhibitör kontrolü (ör. NaF, tartrat):</b> Hangi enzim veya izoenzim reaksiyona katkı sağlıyor?</li>
+    </ul>`,
+    hook:"Metal yakalama = Fosfat + Metal + Sülfid (ATPaz, Gomori). Azo = Naftol + Diazonyum. Tetrazolyum = Elektron → Mavi FORMAZAN (SDH, NADH-TR). Substratsız kontrol = Nonspesifik kromojen çökmesini denetler!" },
+
+  { no:"5.4", t:"Alkalen Fosfataz (ALP) ve Asit Fosfataz (ACP) Yöntemleri", body:`
+    <div class="tbl"><table>
+      <tr><th>Özellik</th><th>Alkalen Fosfataz (ALP)</th><th>Asit Fosfataz (ACP)</th></tr>
+      <tr><td><b>Optimum pH</b></td><td><b>pH 9,0 – 9,6</b> (Alkali ortam)</td><td><b>pH 4,7 – 5,0</b> (Asidik ortam)</td></tr>
+      <tr><td><b>Hücresel Dağılım</b></td><td><b>Hücre membranı</b>, böbrek proksimal tübül fırçamsı kenarı, ince bağırsak, <b>osteoblastlar</b>, kapiller endotel</td><td><b>Lizozomlar</b>, <b>makrofajlar</b>, prostat epiteli, karaciğer, dalak, <b>osteoklastlar (TRAP)</b>, nekrotik kas lifleri</td></tr>
+      <tr><td><b>Gomori Metal Yakalama</b></td><td>Substrat + Enzim → Fosfat + Kalsiyum → Kalsiyum fosfat + <b>Kobalt</b> → Kobalt fosfat + Amonyum sülfid → <b>Siyah/kahverengi Kobalt sülfid (CoS)</b></td><td>Substrat + Enzim → Fosfat + <b>Kurşun (Pb)</b> → Kurşun fosfat + Sülfid → <b>Siyah Kurşun sülfid (PbS)</b> (Kurşun toksisitesine dikkat!)</td></tr>
+      <tr><td><b>Azo Eşleşmesi</b></td><td>Naftol AS-BI fosfat + taze diazonyum tuzu → <b>Kırmızı / Kırmızı-kahverengi</b></td><td>Naftol AS-BI fosfat + diazonyum tuzu → <b>Parlak Kırmızı</b></td></tr>
+      <tr><td><b>Klinik Uygulama & İnhibitör</b></td><td>Kemik oluşumu (osteoblast), kas rejenerasyonu, safra kanalikülleri. (Kısa formol-kalsiyum prefiksasyonu yapılabilir)</td><td>Kas biyopsisinde <b>nekrotik lif ve fagositoz (makrofaj)</b> gösterimi. <b>Tartrat</b> kontrolü ile <b>TRAP</b> (tartrata dirençli ACP: saçlı hücreli lösemi, osteoklast) ayrılır.</td></tr>
+    </table></div>
+    <h4>Sorun Giderme (Troubleshooting)</h4>
+    <ul>
+      <li><b>Kenarlar koyu boyanmış:</b> Kesit inkübasyon sırasında kurumuştur (nemli tut, reaktif hacmini artır).</li>
+      <li><b>Yamalı reaksiyon:</b> Dondurma-çözülme (freeze-thaw) artefaktı veya eşitsiz fiksasyon.</li>
+      <li><b>Yaygın koyu zemin:</b> Aşırı uzun inkübasyon veya metal/diazonyum çökeltisi.</li>
+    </ul>`,
+    hook:"ALP = pH 9,0-9,6, Membran/Osteoblast/Böbrek fırçamsı kenar, Gomori'de Kalsiyum + KOBALT sülfid. ACP = pH 4,7-5,0, Lizozom/Makrofaj/Prostat, Gomori'de KURŞUN sülfid, Tartrat ile TRAP bakılır." }
+]},
+
+{ id:6, label:"Hafta 6", short:"H6", title:"Enzim Histokimyası II: Spesifik Yöntemler ve Tanısal Uygulamalar", sum:"Spesifik fosfatazlar (5'-NT, G6Paz, Miyofibriller ATPaz ile kas lifi tiplemesi), Esterazlar (NSE + NaF, CAE, AChE ve Hirschsprung) ve Oksidatif Enzimler (NADH-TR, SDH, COX, COX-SDH).", topics:[
+  { no:"6.1", t:"Spesifik Fosfatazlar ve Miyofibriller ATPaz ile Kas Lifi Tiplemesi", body:`
+    <ul>
+      <li><b>5′-Nükleotidaz (5′-NT):</b> Substratı <b>adenozin-5′-fosfat (AMP)</b>’tır (pH ~7,5). Plazma membranı, karaciğer safra kanalikülleri ve damarlarda metal yakalama ile kahverengi-siyah görünür.</li>
+      <li><b>Glukoz-6-Fosfataz (G6Paz):</b> Substratı <b>glukoz-6-fosfat</b>tır. Endoplazmik retikulum (karaciğer, böbrek) enzimidir; fiksasyona aşırı duyarlı olduğundan fiksesiz kriyostat kesiti gerekir (Glikojen depo hastalığı tip I - Von Gierke araştırmaları).</li>
+      <li><b>Miyofibriller Adenozin Trifosfataz (ATPaz):</b> Substratı <b>ATP</b>’dir (kalsiyum/kobalt metal yakalama). Kas biyopsisinde <b>farklı pH’larda yapılan ön inkübasyonla</b> Tip I (yavaş kasılan, oksidatif) ve Tip II (hızlı kasılan, glikolitik) kas liflerini ayırır!</li>
+    </ul>
+    <div class="tbl"><table>
+      <tr><th>Yöntem / Ön İnkübasyon Koşulu</th><th>Tip I Lifler (Yavaş / Oksidatif)</th><th>Tip II Lifler (Hızlı / Glikolitik)</th></tr>
+      <tr><td><b>ATPaz pH 9,4 (Alkali)</b></td><td><b>Açık (Soluk)</b></td><td><b>Koyu (Siyah/Kahverengi)</b></td></tr>
+      <tr><td><b>ATPaz pH 4,2 – 4,3 (Asidik)</b></td><td><b>Koyu (Siyah/Kahverengi)</b></td><td><b>Açık (Soluk)</b></td></tr>
+      <tr><td><b>ATPaz pH 4,6</b></td><td><b>En Koyu</b></td><td>Tip IIA açık, Tip IIB orta koyu (alt tipleri ayırır)</td></tr>
+      <tr><td><b>Oksidatif Enzimler (NADH-TR, SDH, COX)</b></td><td><b>Görece Koyu</b> (mitokondriden zengin)</td><td><b>Görece Açık</b></td></tr>
+    </table></div>
+    <p><b>Tanısal Yorum:</b> Normal iskelet kasında Tip I ve Tip II lifler <b>dama tahtası (mozaik)</b> düzeninde karışık dağılır. Nörojenik hastalıklarda (denervasyon ve yeniden innervasyon) dama tahtası görünümü bozulur ve aynı tip liflerin bir araya toplandığı <b>lif tipi gruplaşması (fiber type grouping)</b> görülür.</p>`,
+    hook:"ATPaz pH 9,4 (Alkali) = Tip II KOYU, Tip I Açık! ATPaz pH 4,2-4,3 (Asit) = Tam tersi, Tip I KOYU, Tip II Açık! Dama tahtası kaybı / gruplaşma = Nörojenik reinnervasyon." },
+
+  { no:"6.2", t:"Esterazlar, Sodyum Florür (NaF) İnhibisyonu ve Hirschsprung (AChE)", body:`
+    <div class="pair">
+      <div><b>Nonspesifik Esterazlar (NSE) ve Hematopatoloji</b><span><b>Alfa-naftil asetat</b> veya <b>alfa-naftil bütirat</b> substratlarını hidrolize ederek diazonyum tuzuyla kırmızı-kahverengi azo boya oluşturur (İndoksil asetat ise mavi renk verir). Kemik iliği ve kan yaymalarında <b>monositik seri (AML M4/M5)</b> hücrelerinde güçlü pozitiftir.<br><b>Kritik Kontrol:</b> Monositlerdeki NSE aktivitesi <b>Sodyum Florür (NaF) ile inhibe olur (baskılanır)!</b> Granülositik (miyeloid) seriyi göstermek için ise <b>kloroasetat esteraz (CAE, Leder)</b> kullanılır.</span></div>
+      <div><b>Asetilkolinesteraz (AChE) ve Hirschsprung Hastalığı</b><span>Tiyokolin substratı ve metal (bakır) yakalama ilkesine dayanır.<br>• <b>Örnek:</b> Dentat çizginin yeterince proksimalinden alınmış, <b>submukoza içeren taze rektal biyopsi</b> (10 µm kriyostat seri kesitleri).<br>• <b>Hirschsprung Pozitif Patern:</b> Ganglion hücreleri yoktur (aganglionozis); buna karşılık <b>lamina propriaya (mukozaya) uzanan kalınlaşmış/artmış AChE-pozitif parasempatik sinir lifleri</b> ve submukozada hipertrofik sinir gövdeleri görülür.<br>• <b>Sınırlılık (Yalancı Negatiflik):</b> Yenidoğan döneminde (sinir hipertrofisi henüz gelişmemişken), çok distal (anal kanal) veya submukoza içermeyen çok yüzeysel biyopsilerde ve <b>total kolonik aganglionozda</b> yalancı negatif çıkabilir!</span></div>
+    </div>
+    <p><b>Diğer Spesifik Esterazlar / Peptidazlar:</b> <b>Lipaz</b> (Tween substratı, kalsiyum sabunu + kurşun yakalama), <b>Beta-glukuronidaz</b> (Naftol AS-BI, lizozomal kırmızı), <b>Lösin aminopeptidaz (LAP)</b> (Fast Blue + bakır şelasyonu, bağırsak/safra).</p>`,
+    hook:"Monosit = Alfa-naftil asetat/bütirat esteraz (NSE) pozitif ve SODYUM FLORÜR (NaF) ile baskılanır! Hirschsprung = Taze rektal biyopside lamina propriada artmış AChE(+) sinir lifleri." },
+
+  { no:"6.3", t:"Oksidatif Enzimler: NADH-TR, SDH, COX ve Birleşik COX–SDH", body:`
+    <p>Oksidoredüktazlar elektron aktarımını katalizler. Dehidrogenaz reaksiyonlarında elektronlar <b>tetrazolyum tuzuna (NBT)</b> aktarılır ve enzim bölgesinde çözünmeyen mavi-mor <b>formazan</b> çöker.</p>
+    <div class="tbl"><table>
+      <tr><th>Enzim / Yöntem</th><th>Biyolojik Hedef & Lokalizasyon</th><th>Pozitif Görünüm</th><th>Kas Biyopsisinde Tanısal Önemi</th></tr>
+      <tr><td><b>NADH-TR</b> (NADH Tetrazolyum Redüktaz)</td><td>Hem mitokondri hem <b>sarkoplazmik retikulum (SR)</b> oksidoredüktaz ağı (<b>Mitokondriye özgül değildir!</b>)</td><td>Mavi formazan</td><td>Kas lifi <b>iç mimari</b> bozukluklarını gösterir: <b>Target (hedef) lif</b> (denervasyon), <b>central core</b>, <b>moth-eaten (güve yeniği)</b>, lobüle lif, tübüler agregatlar</td></tr>
+      <tr><td><b>SDH</b> (Süksinat Dehidrogenaz)</td><td>Mitokondri <b>Kompleks II</b> (Tamamı nükleer DNA kodludur, <b>mitokondriye özgüldür</b>)</td><td>Mavi formazan</td><td>Mitokondriyal miyopatilerde subsarkolemmal mitokondri birikimini (<b>mavi ragged lifler</b>) gösterir</td></tr>
+      <tr><td><b>COX</b> (Sitokrom c Oksidaz)</td><td>Mitokondri iç membranı <b>Kompleks IV</b> (Hem mtDNA hem nDNA kodludur; DAB oksidasyonu)</td><td>Kahverengi (DAB ürünü)</td><td>Mitokondriyal hastalıklarda (mtDNA mutasyonları) lifler arasında <b>mozaik COX kaybı (COX-negatif lifler)</b> görülür</td></tr>
+      <tr><td><b>Birleşik COX–SDH</b></td><td>Önce COX (kahverengi DAB), ardından SDH (mavi tetrazolyum) uygulanır</td><td>Normal lif: <b>Kahverengi</b><br>Patolojik lif: <b>Parlak Mavi</b></td><td>Normal liflerde kahverengi COX boyası SDH’yi örter. <b>COX aktivitesi kaybolmuş ama SDH’si (mitokondrisi) korunan/artmış lifler parlak MAVİ parlar!</b></td></tr>
+    </table></div>
+    <p><b>Diğer Oksidaz/Peroksidazlar:</b> <b>Miyeloperoksidaz (MPO - DAB)</b> hematopatolojide miyeloid seriyi gösterir (IHK’da endojen peroksidaz zemini yapabilir!). <b>Tirozinaz (DOPA reaksiyonu)</b> melanositlerde siyah pigment oluşturur.</p>`,
+    hook:"NADH-TR = Mitokondri + Sarkoplazmik Retikulum (İç mimari: Target lif, Core, Moth-eaten; mitokondriye özgül DEĞİL!). SDH = Kompleks II (Mavi). COX = Kompleks IV (Kahverengi). COX-SDH'de MAVİ LİF = COX negatif, SDH pozitif (Mitokondriyal hastalık)!" }
+]},
+
+{ id:7, label:"Hafta 7", short:"H7", title:"İmmünohistokimya (İHK) Tanımı ve Temel Kavramlar", sum:"İHK tanımı ve tarihçesi (Coons), hedef antijen yerleşimleri, Ig yapısı (Fab/Fc, IgG), Afinite vs Avidite vs Titre, Poliklonal vs Monoklonal (Hibridoma: Köhler & Milstein).", topics:[
+  { no:"7.1", t:"İmmünohistokimyanın Tanımı, Tarihçesi ve Hedef Antijen Yerleşimleri", body:`
+    <p><b>İmmünohistokimya (İHK / IHC):</b> İşaretlenmiş (florokrom veya enzimle) antikorlar kullanılarak hücre ve doku <b>antijenlerinin (proteinlerinin) bulundukları yerde (in situ)</b> özgül antijen-antikor etkileşimiyle görünür hale getirilmesi yöntemidir.</p>
+    <ul class="chain four">
+      <li><span class="k">1940’lar</span><b>Albert H. Coons</b><span>İHK’yı ilk kez uyguladı; antikoru <b>flüoresan boya (FITC)</b> ile işaretleyerek antijenleri gösterdi.</span></li>
+      <li><span class="k">1970’ler</span><b>Monoklonal & Enzim</b><span>Köhler-Milstein hibridoma tekniği ve enzim (HRP/DAB) temelli ışık mikroskobu İHK gelişti.</span></li>
+      <li><span class="k">1990’lar</span><b>Antijen Geri Kazanımı</b><span>Formalin fiksasyonunun maskelediği epitopları açan <b>ısı ile antijen geri kazanımı (HIER)</b> yaygınlaştı.</span></li>
+      <li><span class="k">Günümüz</span><b>Polimer & Dijital</b><span>Polimer deteksiyon sistemleri, prediktif/hedefe yönelik belirteçler (HER2, PD-L1) ve dijital analiz.</span></li>
+    </ul>
+    <h4>Hedef Antijenlerin Hücresel Yerleşimi (Boyanma Paterni Yorumun Parçasıdır!)</h4>
+    <div class="tbl"><table>
+      <tr><th>Hücresel Yerleşim</th><th>Örnek Belirteçler (Antikorlar)</th><th>Yorum İçin Dikkat Edilecek Nokta</th></tr>
+      <tr><td><b>Nükleer (Çekirdek)</b></td><td><b>ER, PR, Ki-67, TTF-1</b>, p53</td><td>Pozitif hücre yüzdesi ve boyanma yoğunluğu (Sitoplazmik boyanma artefakttır)</td></tr>
+      <tr><td><b>Hücre Membranı</b></td><td><b>HER2, CD20, E-cadherin</b>, CD3, CD45</td><td>Tam (halka şeklinde) veya kısmi membranöz boyanma paterni</td></tr>
+      <tr><td><b>Sitoplazmik</b></td><td><b>Sitokeratin (CK), Desmin, ALK</b>, Vimentin, SMA</td><td>Granüler veya diffüz sitoplazmik görünüm</td></tr>
+      <tr><td><b>Golgi veya Organel</b></td><td><b>CD15</b>, bazı nöroendokrin belirteçler</td><td>Perinükleer noktasal (paranükleer dot-like) veya granüler dağılım</td></tr>
+    </table></div>`,
+    hook:"İHK'nın babası = Albert H. Coons (1940'lar, floresan antikor). Nükleer = ER, PR, Ki-67, TTF-1. Membran = HER2, CD20, E-cadherin. Sitoplazmik = Sitokeratin, Desmin, ALK." },
+
+  { no:"7.2", t:"Antijen, Epitop, Paratop ve İmmünoglobulin (Antikor) Yapısı", body:`
+    <ul>
+      <li><b>Antijen:</b> Vücuda girdiğinde bağışıklık sistemi tarafından antikor üretimine yol açan ve dokuda saptanmaya çalışılan hedef molekül (çoğunlukla protein).</li>
+      <li><b>Epitop (Antijenik Belirleyici):</b> Antijen üzerinde antikorun doğrudan tanıdığı ve bağlandığı özgül aminoasit dizisi / bölge. (Bir antijen üzerinde birden fazla farklı epitop bulunabilir).</li>
+      <li><b>Paratop:</b> Antikor molekülünün Fab ucunda bulunan ve epitopa anahtar-kilit gibi bağlanan bölge.</li>
+      <li><b>İmmünoglobulin (Ig) Üretimi:</b> T lenfositler antikor salgılamaz (hücresel bağışıklık yapar). Antikorlar yalnızca antijenle uyarılıp farklılaşan <b>B lenfosit kökenli plazma hücreleri</b> tarafından üretilir.</li>
+      <li><b>İmmünoglobulin Yapısı:</b> Birbirinin aynı <b>2 ağır (heavy) ve 2 hafif (light) zincirden</b> oluşan <b>4 zincirli</b> Y şeklinde bir glikoproteindir. Üstteki kollar antijeni bağlayan <b>Fab bölgesi</b> (değişken bölge), alttaki gövde ise sekonder antikorun veya hücre reseptörlerinin bağlandığı sabit <b>Fc bölgesi</b>dir.</li>
+      <li><b>5 İmmünoglobulin Sınıfı:</b> IgG, IgM, IgA, IgD, IgE (<b>GAMDE</b>). İmmünohistokimyada en sık kullanılan antikor sınıfı <b>IgG</b>’dir!</li>
+    </ul>`,
+    hook:"Epitop = Antijen üzerindeki hedef dizi. Paratop = Antikorun tutan ucu. Antikor = B lenfosit → Plazma hücresi üretir; 2 ağır + 2 hafif = 4 zincir; Fab antijeni tutar; İHK'da en çok IgG kullanılır." },
+
+  { no:"7.3", t:"Poliklonal ve Monoklonal Antikor Üretimi (Hibridoma Teknolojisi)", body:`
+    <div class="pair">
+      <div><b>Poliklonal Antikor Eldesi (Antiserum)</b><span>Tavşan, keçi veya kobay gibi bir hayvana saf antijen enjekte edilir (immünizasyon). Hayvanın farklı B lenfosit klonları antijenin <b>farklı epitoplarına</b> karşı antikor üretir. Kan alınıp santrifüj edilerek <b>antiserum</b> elde edilir ve kolon kromatografisiyle saflaştırılır (Spesifikliği ELISA, RIA veya Blotting ile test edilir).<br>• <b>Avantajı:</b> Birden çok epitopa bağlandığı için <b>aviditesi (bağlanma kuvveti) ve boyama duyarlılığı yüksektir</b>; fiksasyon kaynaklı epitop kaybına daha dayanıklıdır.<br>• <b>Dezavantajı:</b> Özgüllüğü daha düşüktür; donör hayvanın doğal antikorları nedeniyle <b>çapraz reaksiyon ve zemin boyanması</b> riski yüksektir, partiler (lotlar) arası değişkenlik gösterir.</span></div>
+      <div><b>Monoklonal Antikor Eldesi (Köhler & Milstein, 1975)</b><span>Tek bir B lenfosit klonunun ürettiği, antijenin <b>yalnızca tek bir epitopuna</b> karşı kesinlikle özgün antikorlardır. Normal B lenfositler kültürde kısa sürede ölür; bu yüzden antijenle aşılanmış <b>fare dalağından alınan B lenfositler</b> ile kültürde <b>sonsuz bölünme yeteneğine sahip myelom (kemik iliği tümörü) hücreleri</b> kaynaştırılarak (füzyon) melez <b>“Hibridoma”</b> hücreleri elde edilir.<br>• <b>Avantajı:</b> Tek bir epitopa bağlandığı için <b>özgüllüğü çok yüksektir</b>, zemin boyanması azdır ve kültürde sınırsız/standart üretilebilir.<br>• <b>Dezavantajı:</b> Tek bölgeye bağlandığı için boyanma şiddeti daha zayıf olabilir; hedef epitop fiksasyonda bozulursa negatif kalır. (Farklı iki proteinde aynı aminoasit dizisi varsa yine de çapraz reaksiyon olabilir).</span></div>
+    </div>`,
+    hook:"Hibridoma (Köhler & Milstein 1975) = Fare Dalak B Lenfositi (antikor üretir) + Myelom Kanser Hücresi (sonsuz bölünür) → MONOKLONAL Antikor (Tek epitop, yüksek özgüllük!). Poliklonal = Çok epitop, güçlü boyanma ama yüksek zemin/çapraz reaksiyon." },
+
+  { no:"7.4", t:"“İyi” Bir Antikorun 3 Temel Özelliği: Afinite, Avidite ve Titre", body:`
+    <ol class="chain">
+      <li><span class="k">1 · Anahtar-Kilit Uyumu</span><b>Yüksek Afinite (İlgi)</b><span>Tek bir antikor bağlanma bölgesinin (paratop) tek bir antijenik bölgeye (epitop) olan <b>bağlanma ilgisi ve uyumudur</b>.Spesifik epitopa iyi uymalı, diğer antijenlere bağlanmamalıdır.</span></li>
+      <li><span class="k">2 · Toplam Bağlanma Gücü</span><b>Yüksek Avidite (Kuvvet)</b><span>Antijen ile antikor arasındaki tüm bağların <b>toplam bağlanma kuvvetidir (dayanıklılığıdır)</b>. Yüksek aviditeli spesifik antikor yıkama basamaklarında kesitten <b>yıkanıp akmaz</b>; düşük aviditeli istenmeyen antikorlar ise yıkanarak uzaklaşır.</span></li>
+      <li><span class="k">3 · Yüksek Dilüsyon</span><b>Yüksek Titre (Konsantrasyon)</b><span>Antiserum içindeki spesifik antikor konsantrasyonunun yüksek olmasıdır. Yüksek titre sayesinde antikor <b>yüksek oranda sulandırılarak (dilüe edilerek)</b> kullanılır; böylece dokuyla reaksiyona girebilecek istenmeyen antikorlar seyreltilerek zemin boyanması önlenir.</span></li>
+    </ol>`,
+    hook:"Afinite = Tek bağın uyumu/ilgisi. Avidite = Toplam bağlanma kuvveti (yıkamada akmaması). Titre = Konsantrasyon (yüksek dilüsyonla istenmeyen antikorları seyreltme)." }
+]}
+];
+
+/* ===================== SORU BANKASI (72 SORU) ===================== */
+const QS = [
+// Hafta 2 (12 Soru)
+{w:2,q:"PAS (Periodik Asit Schiff) reaksiyonunda periodik asidin kimyasal görevi nedir?",o:["Karbonhidratlardaki 1,2-glikol (komşu hidroksil) gruplarını okside ederek aldehit gruplarına dönüştürmek","Aldehit gruplarına doğrudan bağlanarak magenta renk oluşturmak","Glikojendeki alfa-1,4 glikozidik bağları hidrolize etmek","Asidik müsinlerdeki sülfat gruplarını iyonize etmek"],a:0,e:"Periodik asit (%0,5-1) 1,2-glikol gruplarını okside edip aldehit oluşturur; ardından Schiff reaktifi bu aldehitlere bağlanarak parlak magenta renk verir."},
+{w:2,q:"Bir karaciğer kesitinde sitoplazmik PAS pozitif (magenta) birikim, ardışık kesite uygulanan PAS–Diastaz (PAS-D) boyamasında tamamen kayboluyorsa bu madde nedir?",o:["Glikojen","Nötral müsin","Bazal membran glikoproteini","Fungal (mantar) hücre duvarı"],a:0,e:"Diastaz (alfa-amilaz) glikojeni sindirerek kesitten uzaklaştırır. PAS(+) olup PAS-D'de kaybolan madde glikojendir."},
+{w:2,q:"Alcian Blue boyamasında çözelti pH’sının 2,5 yerine 1,0 olarak ayarlanmasının amacı nedir?",o:["Karboksil gruplarının iyonizasyonunu baskılayıp yalnızca güçlü sülfatlı asidik müsinleri (sülfomüsinleri) boyamak","Sadece nötral müsinleri magenta renkte boyamak","Glikojeni müsinlerden ayırt etmek","Yalnızca karboksilli sialomüsinleri boyamak"],a:0,e:"pH 2,5'te hem karboksil (COO⁻) hem sülfat (SO₃⁻) grupları mavi boyanır. pH 1,0'da karboksil iyonizasyonu baskılanır, sadece güçlü sülfatlı müsinler boyanır."},
+{w:2,q:"Alcian Blue boyasının kimyasal yapısında merkezde hangi metal atomu bulunur?",o:["Bakır (Ftalosiyanin yapısında)","Demir","Alüminyum","Gümüş"],a:0,e:"Alcian Blue, merkezinde bakır bulunan ftalosiyanin yapısında katyonik (bazik) bir boyadır."},
+{w:2,q:"Kombine Alcian Blue – PAS (AB–PAS) yönteminde doğru uygulama sırası ve renk sonuçları hangisidir?",o:["Önce Alcian Blue pH 2,5 (asidik müsin mavi), ardından PAS (nötral müsin magenta, karışık müsin mor)","Önce PAS, ardından Alcian Blue pH 1,0","Önce diastaz, ardından Müsikarmin","Önce Schiff reaktifi, ardından periodik asit"],a:0,e:"Çoğu protokolde önce Alcian Blue pH 2,5 uygulanarak asidik müsinler maviye boyanır, ardından PAS ile nötral müsinler magenta olur."},
+{w:2,q:"Özellikle epitelyal müsini ve Cryptococcus neoformans’ın kalın polisakkarit kapsülünü koyu pembe/kırmızıya boyayan alüminyum-karmin kompleksli yöntem hangisidir?",o:["Müsikarmin","Alcian Blue","Best karmini","Kolloidal demir"],a:0,e:"Müsikarmin, adenokarsinomlardaki epitelyal müsini ve Cryptococcus kapsülünü kırmızı-pembe gösterir."},
+{w:2,q:"Alcian Blue pH 2,5 ve Müsikarmin boyamaları için en uygun pozitif kontrol dokusu hangisidir?",o:["Kolon veya ince bağırsak (Goblet hücreleri)","Çizgili iskelet kası","Beyin beyaz cevheri","Dalak"],a:0,e:"Bağırsak mukozasındaki goblet hücreleri zengin asidik/epitelyal müsin içerdiğinden ideal pozitif kontroldür."},
+{w:2,q:"Biyolojik amin boyalarında, hücre granüllerinin dışarıdan indirgeyici bir basamak olmadan formalin fiksasyonu sonrası amonyaklı gümüşü doğrudan indirgemesi özelliğine ne denir?",o:["Argentafin reaksiyon (Örn: Fontana-Masson, karsinoid tümörler)","Arjirofil reaksiyon (Örn: Grimelius)","Kromafin reaksiyon (Örn: Wiesel)","Metakromazi"],a:0,e:"Argentafin hücreler (ve melanin) gümüşü doğrudan kendisi indirger. Arjirofil hücreler ise dışarıdan indirgeyici maddeye ihtiyaç duyar."},
+{w:2,q:"Adrenal medulla veya paraganglion hücrelerindeki katekolamin granüllerinin dikromatlı fiksatiflerle sarı-kahverengi görünmesine ne ad verilir?",o:["Kromafin reaksiyon","Argentafin reaksiyon","Arjirofil reaksiyon","PAS reaksiyonu"],a:0,e:"Dikromat solüsyonları ile fikse edilen adrenal medulla granüllerinin kahverengi görülmesi kromafin reaksiyondur (Modifiye Giemsa, Schmorl, Wiesel)."},
+{w:2,q:"Arjirofilik nöroendokrin granülleri göstermek için kullanılan ve Bouin fiksatifinin tercih edildiği yöntem hangisidir?",o:["Grimelius (veya Pascual)","Fontana-Masson","Wiesel","Müsikarmin"],a:0,e:"Grimelius ve Pascual arjirofil boyalardır; Grimelius'ta Bouin fiksatifi tercih edilir."},
+{w:2,q:"Asidik mukosubstansların negatif gruplarına pozitif yüklü demir iyonlarının bağlanıp Prusya mavisi reaksiyonuyla görünür hale getirildiği yöntem hangisidir?",o:["Kolloidal demir yöntemi","Best karmini","PAS-Diastaz","Lektin histokimyası"],a:0,e:"Kolloidal demir yöntemi ferrik iyonların asidik müsinlere bağlanıp ferrosiyanür ile maviye dönüştürülmesine dayanır."},
+{w:2,q:"Aşağıdakilerden hangisi PAS ile pozitif (magenta) boyanan yapılardan biri DEĞİLDİR?",o:["Nötral trigliserid damlacıkları","Böbrek glomerül ve tübül bazal membranları","Karaciğerdeki glikojen","Mantar (fungal) hücre duvarları"],a:0,e:"Nötral trigliseridler parafin takibinde erir ve PAS ile boyanmaz (Oil Red O / Sudan ile dondurulmuş kesitte boyanır)."},
+
+// Hafta 3 (14 Soru)
+{w:3,q:"Masson trikrom ve Van Gieson boyamalarında kollajen lifler sırasıyla hangi renklerde görülür?",o:["Masson: Mavi veya yeşil — Van Gieson: Kırmızı","Masson: Kırmızı — Van Gieson: Mavi","Masson: Sarı — Van Gieson: Siyah","Her ikisinde de mor"],a:0,e:"Masson trikromda kollajen mavi/yeşil (kas kırmızı); Van Gieson'da asit fuksin ile kollajen kırmızı (pikrik asit ile kas sarı) boyanır."},
+{w:3,q:"Polarize ışık mikroskobunda kollajen liflerinin çift kırılma (birefringence) özelliğini belirginleştiren boyama yöntemi hangisidir?",o:["Picrosirius red","Masson trikrom","Orsein","Toluidin mavisi"],a:0,e:"Sirius red (Picrosirius red) kollajen fibrillerine paralel bağlanarak polarize ışıkta çift kırılmayı güçlendirir."},
+{w:3,q:"Elastik lifleri SİYAH, kollajeni kırmızı, kas ve diğer dokuları sarı renkte gösteren kombine boyama yöntemi hangisidir?",o:["Verhoeff–Van Gieson (VVG)","Orsein","Weigert resorsin fuksin","Gomori trikrom"],a:0,e:"Verhoeff elastik lifleri siyaha boyar; karşıt boya olarak kullanılan Van Gieson kollajeni kırmızı, kası sarı yapar."},
+{w:3,q:"Başlıca Tip III kollajenden oluşan retiküler lifler neden 'arjirofilik' olarak tanımlanır?",o:["Gümüş iyonlarını doğrudan metalik gümüşe indirgeyemedikleri ve dışarıdan bir indirgeme basamağı (formalin vb.) gerektiği için","Gümüşü ışık olmadan doğrudan kendileri indirgedikleri için","Sadece asit boyalarla boyandıkları için","Polarize ışıkta elma yeşili çift kırılma verdikleri için"],a:0,e:"Retiküler lifler gümüşü bağlar ancak siyah metalik gümüşe dönüştürmek için indirgeyici solüsyon gerekir (Gomori ve Gordon-Sweets yöntemleri)."},
+{w:3,q:"Mast hücresi granüllerindeki sülfatlanmış glikozaminoglikanların (heparin) bazik Toluidin mavisi ile mavi yerine mor-kırmızı boyanması olayına ne denir?",o:["Metakromazi","Ortokromazi","Çift kırılma (Birefringence)","Otofloresans"],a:0,e:"Yoğun negatif yüklü sülfat grupları üzerinde boya moleküllerinin agregasyonu (üst üste dizilmesi) ışık kırılmasını değiştirerek mor-kırmızı metakromazi oluşturur."},
+{w:3,q:"Yağ (lipid) boyalarında rutin parafin takibinin uygun olmamasının temel nedeni nedir?",o:["Takip sırasındaki alkol ve ksilen gibi organik çözücülerin nötral lipidleri çözerek dokudan uzaklaştırması","Formalinin lipidleri siyaha boyaması","Parafinin lipidlerle kimyasal reaksiyona girmesi","Mikrotom bıçağının yağ dokusunu kesememesi"],a:0,e:"Alkol ve ksilen lipidleri çözer; bu yüzden parafin kesitte yağ hücreleri boş vakuoller halinde görülür. Taze dondurulmuş (kriyostat) kesit ve sulu kapatma şarttır."},
+{w:3,q:"Hem dondurulmuş kesit gerektiren hem de nötral trigliseridleri parlak KIRMIZI renkte gösteren lipid boyası hangisidir?",o:["Oil Red O","Sudan Black B","Osmiyum tetroksit","Luxol Fast Blue"],a:0,e:"Oil Red O nötral lipidleri parlak kırmızı, Sudan III/IV turuncu-kırmızı, Sudan Black B mavi-siyah, Osmiyum tetroksit ise siyah boyar."},
+{w:3,q:"Doymamış lipid bağlarıyla reaksiyona girerek lipidi hem fikse eden hem de SİYAHA boyayan, ancak buharı göz/solunum için ağır tehlike oluşturduğu için çeker ocakta kullanılan madde hangisidir?",o:["Osmiyum tetroksit (OsO₄)","Pikrik asit","Schiff reaktifi","Krezil viyole"],a:0,e:"Osmiyum tetroksit doymamış yağları ve miyelini fikse edip siyah osmiyum dioksite dönüştürür; çok uçucu ve toksiktir."},
+{w:3,q:"Amiloid birikiminin kesin histokimyasal doğrulaması için altın standart yöntem, ideal kesit kalınlığı ve polarize ışık bulgusu nedir?",o:["Congo Red — 8-10 µm kesit — Elma yeşili çift kırılma","PAS — 3-5 µm kesit — Magenta boyanma","Thioflavin T — 2 µm kesit — Mavi floresans","Masson trikrom — 5 µm kesit — Kırmızı boyanma"],a:0,e:"Congo red boyamasında yaklaşık 8–10 µm kesit kullanılır; normal ışıkta somon-pembe/kırmızı, çapraz polarize ışıkta elma yeşili çift kırılma görülür."},
+{w:3,q:"Congo Red pozitifliği hakkında aşağıdakilerden hangisi doğrudur?",o:["Dokuda beta-tabakalı amiloid varlığını doğrular ancak amiloid proteininin alt tipini (AA, AL, ATTR vb.) tek başına belirlemez","Amiloidin kesin olarak AL tipinde olduğunu kanıtlar","Yalnızca hücre içi protein birikimlerini gösterir","İnce (2 µm) kesitlerde çift kırılma en güçlü şekilde izlenir"],a:0,e:"Pozitif Congo red amiloidi gösterir ama protein tipini belirlemez; tiplendirme histokimyanın kapsamını aşar (İHK veya kütle spektrometrisi gerekir)."},
+{w:3,q:"Sinir dokusunda nöron gövdesindeki Nissl cisimciklerini (granüllü ER ve ribozomları) mor-mavi gösteren bazik boya ile miyelin kılıfını mavi gösteren boya hangisinde doğru eşleştirilmiştir?",o:["Nissl: Krezil viyole — Miyelin: Luxol Fast Blue","Nissl: Luxol Fast Blue — Miyelin: Bielschowsky","Nissl: PTAH — Miyelin: Van Gieson","Nissl: Bodian — Miyelin: Congo Red"],a:0,e:"Nissl maddesi (rRNA) Krezil viyole/toluidin mavisi ile; miyelin fosfolipitleri ise Luxol Fast Blue (veya osmiyum) ile boyanır."},
+{w:3,q:"Sinir dokusunda aksonları, nörofibrilleri, Alzheimer hastalığındaki senil plakları ve nörofibriler yumakları göstermek için kullanılan gümüşleme yöntemleri hangileridir?",o:["Bielschowsky ve Bodian (protargol temelli)","Luxol Fast Blue ve Krezil viyole","PTAH ve Orsein","Verhoeff ve Gomori trikrom"],a:0,e:"Bielschowsky ve Bodian akson/nörofibril gümüşleme (impregnasyon) yöntemleridir."},
+{w:3,q:"Glial fibrilleri (gliozis), fibrin ve kas çizgilenmesini mavi tonlarda gösteren tarihsel yöntem hangisidir?",o:["PTAH (Fosfotungstik Asit Hematoksilen)","Luxol Fast Blue","Bodian","Gordon-Sweets"],a:0,e:"PTAH glial lifleri, fibrini ve çizgili kası mavi boyar (güncel rutinde gliozis için GFAP İHK kullanılır)."},
+{w:3,q:"Patoloji laboratuvarında kuruduğunda patlayıcı özellik kazandığı için asla kurutulmaması gereken reaktif hangisidir?",o:["Pikrik asit","Osmiyum tetroksit","Alcian Blue","Schiff reaktifi"],a:0,e:"Pikrik asit (Van Gieson ve Bouin solüsyonunda bulunur) kuruduğunda şoka/ısıya duyarlı patlayıcı kristaller oluşturur."},
+
+// Hafta 4 (14 Soru)
+{w:4,q:"Aşağıdakilerden hangisi endojen-hematojen (kan kaynaklı) bir pigmenttir?",o:["Hemosiderin ve Safra (Bilirubin)","Melanin","Lipofuskin","Antrakotik karbon"],a:0,e:"Hemoglobin, hemosiderin, safra (bilirubin/hematoidin) ve porfirin endojen hematojen pigmentlerdir. Melanin ve lipofuskin endojen nonhematojendir."},
+{w:4,q:"Perls Prusya mavisi reaksiyonunun kimyasal ilkesi, hedefi ve pozitif rengi nedir?",o:["HCl ile proteinden ayrılan ferrik demirin (Fe³⁺) potasyum ferrosiyanür ile koyu mavi ferrik ferrosiyanür oluşturması","Ferroz demirin (Fe²⁺) gümüş nitratı siyaha indirgemesi","Hemoglobindeki maskeli demirin kırmızıya boyanması","Bilirubinin yeşil biliverdine oksitlenmesi"],a:0,e:"Perls reaksiyonu hemosiderindeki Fe³⁺ (ferrik) demiri koyu maviye boyar; hemoglobini doğrudan boyamaz."},
+{w:4,q:"Safra pigmentini (bilirubini) biliverdine oksitleyerek YEŞİL / ZEYTİN YEŞİLİ renkte gösteren yöntem ve uygun kontrol dokusu hangisidir?",o:["Hall–Fouchet yöntemi — Kolestatik karaciğer","Perls yöntemi — Dalak","Fontana–Masson — Deri","Von Kossa — Kemik"],a:0,e:"Hall–Fouchet yönteminde Fouchet reaktifi bilirubini yeşil biliverdine oksitler."},
+{w:4,q:"Kalp kası, hepatosit ve nöronlarda yaşlanmayla perinükleer sarı-kahverengi biriken, Schmorl ile mavi-yeşil, Sudan Black B ile mavi-siyah boyanan ve sarı-turuncu otofloresans veren lizozomal artık pigmenti hangisidir?",o:["Lipofuskin","Hemosiderin","Melanin","Asit formalin hematini"],a:0,e:"Lipofuskin (ve seroid) lizozomal artık cisim (yıpranma) pigmentidir."},
+{w:4,q:"Fontana–Masson pozitifliği neden tek başına kesin melanin tanısı koydurmaz ve melanini doğrulamak için ne yapılır?",o:["Argentafin olan başka maddeler (nöroendokrin granüller, lipofuskin) de pozitif olabildiği için; doğrulama için potasyum permanganat/H₂O₂ ile ağartma (bleaching) yapılır","Karbon pigmenti de ağartma ile kaybolduğu için","Fontana-Masson sadece ferrik demiri boyadığı için","Melanin suda çözündüğü için"],a:0,e:"Melanin ağartma (bleaching) işlemi sonrası kaybolur; karbon ise ağartma ile kaybolmaz."},
+{w:4,q:"Gut hastalığında dokuda biriken monosodyum ürat kristallerinin gösterilebilmesi için hangi fiksatif tercih edilmeli ve hangi inceleme yapılmalıdır?",o:["%95 etanol veya mutlak alkol (sulu formalinden kaçınılmalı) — Polarize ışıkta negatif çift kırılma","%10 nötral tamponlu formalin — Perls boyaması","Bouin fiksatifi — PAS boyaması","Glutaraldehit — Oil Red O boyaması"],a:0,e:"Ürat kristalleri sulu fiksatiflerde (formalinde) çözünür ve geride sadece boşluk bırakır. Alkolde fikse edilip polarize ışıkta incelenmelidir."},
+{w:4,q:"Kalsiyum birikimlerini göstermede kullanılan Von Kossa ve Alizarin Red S yöntemleri arasındaki temel kimyasal fark nedir?",o:["Von Kossa kalsiyumu doğrudan değil ilişkili fosfat/karbonat anyonlarını siyah gösterir; Alizarin Red S ise doğrudan kalsiyumla kompleks oluşturup turuncu-kırmızı gösterir","Von Kossa kalsiyumu kırmızı, Alizarin Red S ise fosfatı siyah gösterir","Her ikisi de sadece demir iyonlarını boyar","Von Kossa sadece dondurulmuş kesitte çalışır"],a:0,e:"Von Kossa bir gümüşleme yöntemidir ve fosfat/karbonat anyonlarını siyaha boyar. Alizarin Red S (pH 4,2-4,5) doğrudan Ca²⁺ katyonunu turuncu-kırmızıya boyar."},
+{w:4,q:"Wilson hastalığında karaciğerde biriken bakırı (Cu) göstermek için kullanılan iki temel histokimyasal yöntem hangisidir?",o:["Rhodanine (turuncu-kırmızı) ve Rubeanik asit (yeşilimsi siyah)","Perls ve Hall–Fouchet","Von Kossa ve Alizarin Red S","Fontana–Masson ve Schmorl"],a:0,e:"Bakır gösteriminde Rodanin (kırmızı-kahverengi) ve Rubeanik asit (yeşil-siyah) kullanılır."},
+{w:4,q:"Akciğerde altın kahverengi, çomak veya boncuklu/halter biçiminde görülen ferruginöz cisimlerin Perls boyasıyla mavi (pozitif) boyanmasının nedeni nedir ve bu durum asbesti kesinleştirir mi?",o:["Lifin çevresindeki makrofaj kaynaklı demir-protein (ferritin/hemosiderin) kaplaması Perls pozitiftir; ancak her ferruginöz cisim asbest değildir","Asbest lifinin kendisi saf demirden oluştuğu için kesinlikle asbesttir","Karbon partikülleri Perls pozitif olduğu için","Silika kristalleri maviye boyandığı için"],a:0,e:"Ferruginöz cisimlerin demir kılıfı Perls pozitiftir ama başka inorganik lifler de kaplanabilir; kesin element doğrulaması gerektiğinde SEM-EDS yapılır."},
+{w:4,q:"Tamponlanmamış asidik formalinde (pH < 6) bekletilen kanlı dokularda oluşan koyu kahverengi-siyah artefakt pigmenti hangisidir ve nasıl önlenir?",o:["Asit formalin hematini — Nötral tamponlu formalin (%10 NBF) kullanılarak önlenir","Cıva pigmenti — İyot ve tiyosülfat ile önlenir","Krom pigmenti — Alkolle önlenir","Boya çökeltisi — Kriyostat ile önlenir"],a:0,e:"Asit formalin hematini, asidik formalinin hemoglobinle reaksiyonu sonucu oluşur; nötral tamponlu formalin ile önlenir."},
+{w:4,q:"Zenker veya B5 gibi cıvalı fiksatiflerle tespit edilmiş dokularda görülen kahverengi-siyah cıva pigmenti artefaktı kesitlerden nasıl temizlenir?",o:["İyot (Lugol) ve ardından sodyum tiyosülfat işlemiyle","Potasyum permanganat ile ağartılarak","Hidroklorik asit ile","Ksilen içinde kaynatılarak"],a:0,e:"Cıva çökeltisi standart olarak Lugol iyot + sodyum tiyosülfat (hipo) aşamasıyla giderilir."},
+{w:4,q:"Mikroskobik incelemede kesit yüzeyinde, dokuyla aynı optik düzlemde olmayan (odak dışı) ve düzensiz dağılmış renkli tanecikler görülmesi öncelikle neyi düşündürür?",o:["Boya çökeltisi artefaktını (boyanın süzülmediğini)","Hemosiderozisi","Malign melanomu","Kalsifikasyonu"],a:0,e:"Doku düzleminin üzerinde, odak dışı düzensiz tanecikler filtre edilmemiş boya çökeltisini gösterir."},
+{w:4,q:"Alveoler makrofajlarda görülen siyah antrakotik karbon pigmentini melaninden ve hemosiderinden ayıran özellik nedir?",o:["Hem Perls Prusya mavisi negatiftir hem de ağartma (bleaching) işlemiyle rengi kaybolmaz","Perls pozitiftir ve ağartma ile hızla silinir","Polarize ışıkta elma yeşili çift kırılma verir","Alcian Blue ile maviye boyanır"],a:0,e:"Karbon çok inerttir; hiçbir boyayla reaksiyona girmez (Perls negatif) ve oksidanlarla ağartılamaz."},
+{w:4,q:"Özel bir boyama çalışmasında hasta lamıyla birlikte çalışılan pozitif kontrol kesiti boyanmadığında (negatif kaldığında) laboratuvar kararı ne olmalıdır?",o:["Hasta sonucu (negatif olsa bile) geçerli kabul edilmez ve yayımlanmaz; reaktifler ve prosedür kontrol edilerek boyama tekrarlanır","Hasta lamı negatif olarak raporlanır","Sadece H&E sonucuna bakılarak özel boya pozitif yazılır","Kontrol lamı mikroskoptan kaldırılıp arşivlenir"],a:0,e:"Kalite güvencesinin temel kuralı: Başarılı pozitif kontrol olmadan negatif hasta sonucu geçerli değildir."},
+
+// Hafta 5 (10 Soru)
+{w:5,q:"Enzim histokimyası ile immünohistokimya (İHK) arasındaki en temel fark nedir?",o:["Enzim histokimyası enzimin katalitik aktivitesini (işlevini), İHK ise enzim proteininin antijenik varlığını gösterir","Enzim histokimyası sadece parafin kesitlerde, İHK ise sadece dondurulmuş kesitlerde çalışır","Enzim histokimyasında antikorlar, İHK'da ise substratlar kullanılır","İkisi arasında hiçbir fark yoktur"],a:0,e:"Enzimden kopan ürünün görülmesi katalitik aktiviteyi kanıtlar; İHK ise protein inaktif/denatüre olsa bile epitop duruyorsa boyar."},
+{w:5,q:"Enzim histokimyası çalışmalarında (özellikle kas biyopsisinde) doku dondurulurken neden doğrudan sıvı azota atılmaz da 'sıvı azotla soğutulmuş izopentan' kullanılır?",o:["Doğrudan sıvı azota atmak gaz zarfı oluşturup yavaş donmaya ve buz kristali (çatlak/kabarcık) artefaktına yol açtığı için; soğuk izopentan kontrollü ve çok hızlı dondurma sağlar","İzopentan enzimleri kimyasal olarak fikse ettiği için","Sıvı azot dokudaki tüm enzimleri anında yok ettiği için","İzopentan kesitin parafine gömülmesini sağladığı için"],a:0,e:"Sıvı azotla soğutulmuş izopentan ısıyı anında çekerek buz kristali artefaktını önler."},
+{w:5,q:"Rutin patoloji laboratuvarında enzim histokimyasında en çok kullanılan iki enzim sınıfı hangileridir?",o:["Hidrolazlar (fosfataz, esteraz) ve Oksidoredüktazlar (dehidrogenaz, oksidaz, peroksidaz)","Ligazlar ve İzomerazlar","Liyazlar ve Transferazlar","Sadece Kinazlar"],a:0,e:"Rutin patolojide en sık hidrolazlar ve oksidoredüktazlar kullanılır."},
+{w:5,q:"Enzim reaksiyonunda oluşan renkli ürünün çözünmez olması ve tam enzimin bulunduğu yerde çökmesi neden kritiktir?",o:["Ürün çözünür olup çevreye difüze olursa yanlış lokalizasyona ve bulanık/yaygın boyanmaya yol açacağı için","Ürünün kesitten yıkanıp akması istendiği için","Enzimin kendisini parçalaması için","Parafin takibine girebilmesi için"],a:0,e:"Reaksiyon ürünü oluştuğu yerde kalmalıdır; difüzyon anatomik lokalizasyonu bozar."},
+{w:5,q:"Enzim histokimyasında 'substratsız kontrol' (inkübasyon çözeltisine substrat eklenmemesi) hangi teknik sorunu denetler?",o:["Kromojen veya metal tuzunun enzimatik reaksiyondan bağımsız olarak dokuya nonspesifik çöküp çökmediğini","Dokuda enzim proteininin var olup olmadığını","Mikrotom bıçağının kesit kalınlığını","Fiksatifin pH değerini"],a:0,e:"Substrat yokken de boyanma oluyorsa kromojen/metal nonspesifik çökmüştür (yanlış pozitiflik)."},
+{w:5,q:"Alkalen fosfataz (ALP) ve Asit fosfataz (ACP) enzimlerinin optimum çalıştığı pH aralıkları ve başlıca hücresel yerleşimleri hangisinde doğru verilmiştir?",o:["ALP: pH 9,0–9,6 (Hücre membranı, böbrek fırçamsı kenarı, osteoblast) — ACP: pH 4,7–5,0 (Lizozom, makrofaj, prostat)","ALP: pH 4,7–5,0 (Lizozom) — ACP: pH 9,0–9,6 (Mitokondri)","Her ikisi de pH 7,0'da çekirdekte çalışır","ALP: pH 2,0 (Golgi) — ACP: pH 11,0 (Sarkoplazmik retikulum)"],a:0,e:"Alkalen fosfataz alkali pH'da (9,0-9,6) membranlarda; Asit fosfataz asidik pH'da (4,7-5,0) lizozomlarda aktiftir."},
+{w:5,q:"Gomori’nin alkalen fosfataz (ALP) 'metal yakalama' yönteminde substrattan kopan fosfat iyonu sırasıyla hangi metallerle yakalanıp görünür hale getirilir?",o:["Önce kalsiyum fosfat, ardından kobalt fosfat ve son olarak amonyum sülfid ile siyah/kahverengi kobalt sülfid","Doğrudan demir ferrosiyanür ile mavi çökelti","Gümüş nitrat ile sarı çökelti","Bakır sülfat ile yeşil çökelti"],a:0,e:"ALP Gomori yönteminde: Fosfat + Kalsiyum → Kalsiyum fosfat + Kobalt → Kobalt fosfat + Sülfid → Görünür Kobalt sülfid."},
+{w:5,q:"Gomori’nin asit fosfataz (ACP) metal yakalama yönteminde fosfatı yakalamak için hangi ağır metal kullanılır?",o:["Kurşun (sonrasında sülfidle siyah kurşun sülfid oluşur)","Kalsiyum ve kobalt","Alüminyum","Çinko"],a:0,e:"Gomori asit fosfataz yönteminde asidik pH'da çözünmez tuz oluşturan kurşun (Pb) kullanılır."},
+{w:5,q:"Kas biyopsisinde nekrotik kas liflerini, artmış lizozomal aktiviteyi ve fagositoz yapan makrofajları göstermek için hangi enzim boyası kullanılır?",o:["Asit fosfataz (ACP)","Alkalen fosfataz (ALP)","Miyofibriller ATPaz","Sitokrom c oksidaz (COX)"],a:0,e:"Makrofajlar ve lizozomlar asit fosfatazdan çok zengindir; kas biyopsisinde nekroz ve miyofagositozu kırmızı (azo yöntemiyle) gösterir."},
+{w:5,q:"Enzim histokimyası preparatında kesitin sadece kenarlarının koyu boyanması veya yamalı (alacalı) reaksiyon görülmesi sırasıyla hangi hataları düşündürür?",o:["Kenar koyuluğu: Kesit kuruması — Yamalı reaksiyon: Dondurma-çözülme (freeze-thaw) veya eşitsiz fiksasyon","Kenar koyuluğu: Eksik substrat — Yamalı reaksiyon: Fazla yıkama","Her ikisi de yanlış pH'yı gösterir","Her ikisi de ışık mikroskobu arızasını gösterir"],a:0,e:"İnkübasyon sırasında kesit kurursa kenarlar koyu boyanır; doku çözülüp tekrar donarsa yamalı aktivite kaybı olur."},
+
+// Hafta 6 (12 Soru)
+{w:6,q:"Miyofibriller ATPaz boyamasında pH 9,4 (alkali) ve pH 4,2–4,3 (asidik) ön inkübasyonlarında Tip I ve Tip II kas lifleri nasıl görünür?",o:["pH 9,4’te Tip I AÇIK, Tip II KOYU; pH 4,2–4,3’te ise tersine Tip I KOYU, Tip II AÇIK görünür","pH 9,4’te Tip I KOYU, Tip II AÇIK; pH 4,2’de ikisi de siyah görünür","Her iki pH değerinde de Tip I lifler koyu boyanır","ATPaz boyaması lif tiplerini ayıramaz"],a:0,e:"Alkali (pH 9,4) ATPaz'da Tip II hızlı lifler koyu, Tip I yavaş lifler açıktır. Asidik (pH 4,2-4,3) ön inkübasyonda tablo tam tersine döner."},
+{w:6,q:"Kas biyopsisinde normal 'dama tahtası' lif dağılımının kaybolup aynı tip liflerin kümeler oluşturması (lif tipi gruplaşması) neyi destekler?",o:["Nörojenik denervasyon ve yeniden innervasyonu (reinnervasyon)","Normal yaşlanma sürecini","Kesitin kuruduğunu","Glikojen depo hastalığını"],a:0,e:"Bir motor nöron öldüğünde komşu sağlam akson dallanarak o lifleri kendi tipine dönüştürür; buna nörojenik lif tipi gruplaşması denir."},
+{w:6,q:"Hematopatolojide monositik seriyi destekleyen nonspesifik esteraz (alfa-naftil asetat/bütirat) reaksiyonunda 'Sodyum Florür (NaF)' kontrolü neyi gösterir?",o:["Monositik esteraz aktivitesinin sodyum florür ile baskılandığını (inhibe olduğunu)","Granülositlerin aktivitesinin arttığını","Reaktifin bozulduğunu","Eritrositlerin boyandığını"],a:0,e:"Monositlerin nonspesifik esteraz (NSE) aktivitesi NaF'ye duyarlıdır ve NaF eklenen eş kesitte boyanma baskılanır."},
+{w:6,q:"Hirschsprung hastalığı (konjenital aganglionik megakolon) tanısında Asetilkolinesteraz (AChE) enzim histokimyası için uygun örnek ve pozitif tanısal patern nedir?",o:["Submukoza içeren taze dondurulmuş rektal biyopsi — Lamina propriaya uzanan belirgin artmış AChE(+) sinir lifleri ve submukozada hipertrofik sinir gövdeleri","Parafine gömülü mide biyopsisi — Ganglion hücrelerinde AChE artışı","Formalin fikse kolon polibi — Kas tabakasında AChE kaybı","Kan yayması — Lökositlerde AChE pozitifliği"],a:0,e:"Hirschsprung'da ganglion hücresi yoktur ama lamina propriada kalınlaşmış AChE-pozitif parasempatik lif ağı görülür."},
+{w:6,q:"Hirschsprung şüphesinde negatif bir AChE sonucu hangi durumlarda yanıltıcı (yalancı negatif) olabilir?",o:["Yenidoğan döneminde, çok distal (anal kanal) veya submukoza içermeyen yüzeysel biyopside ve total kolonik aganglionozda","Sadece ileri yaş hastalarda","Biyopsi dentat çizginin proksimalinden alındığında","Submukoza bol miktarda alındığında"],a:0,e:"Yenidoğanda sinir hipertrofisi henüz gelişmemiş olabilir; çok yüzeysel/distal biyopsi ve total kolonik aganglionozda da yalancı negatiflik görülebilir."},
+{w:6,q:"Dehidrogenaz enzimlerinin (NADH-TR, SDH) gösteriminde kullanılan tetrazolyum reaksiyonunun temel ilkesi nedir?",o:["Substrat oksitlenirken aktarılan elektronların tetrazolyum tuzunu enzimin aktif olduğu yerde çözünmeyen mavi formazana indirgemesi","Fosfat iyonlarının kalsiyumla çöktürülmesi","Aldehit gruplarının Schiff reaktifiyle birleşmesi","Naftolün diazonyum tuzuyla azo boya oluşturması"],a:0,e:"Tetrazolyum tuzları elektron alarak çözünmez renkli (mavi-mor) formazan çökeltisine indirgenir."},
+{w:6,q:"NADH-Tetrazolyum Redüktaz (NADH-TR) neden yalnızca bir mitokondri boyası olarak değerlendirilmemelidir ve hangi patolojik paternleri gösterir?",o:["Mitokondrilerin yanında sarkoplazmik retikulum (SR) ağını da boyadığı için; target (hedef) lif, central core ve moth-eaten gibi iç lif mimarisi bozukluklarını gösterir","Sadece hücre çekirdeğini boyadığı için","Yalnızca kollajen lifleri boyadığı için","Mitokondrileri hiç boyamadığı için"],a:0,e:"NADH-TR hem mitokondriyi hem sarkoplazmik retikulumu boyar; kas lifinin iç mimarisini (target, core, moth-eaten) en iyi gösteren boyadır."},
+{w:6,q:"Yalnızca mitokondriye özgül olan (Kompleks II) ve subsarkolemmal mitokondri birikimlerini koyu mavi gösteren enzim hangisidir?",o:["Süksinat dehidrogenaz (SDH)","NADH-TR","Alkalen fosfataz","Asetilkolinesteraz"],a:0,e:"SDH (Kompleks II) tamamen nükleer DNA tarafından kodlanır ve yalnızca mitokondri iç membranında bulunur."},
+{w:6,q:"Birleşik COX–SDH (Sitokrom c oksidaz – Süksinat dehidrogenaz) boyamasında normal lifler kahverengi iken bazı kas liflerinin parlak MAVİ görünmesi neyi ifade eder?",o:["O liflerde COX (Kompleks IV) aktivitesinin kaybolduğunu fakat SDH (Kompleks II) aktivitesinin korunduğunu; yani mitokondriyal solunum zinciri (mtDNA) bozukluğunu","Liflerin tamamen nekroza gittiğini ve tüm mitokondrilerin yok olduğunu","Normal Tip II lifleri","Reaktifin bozuk olduğunu"],a:0,e:"COX-negatif fakat SDH-pozitif liflerde kahverengi DAB oluşmadığı için alttaki mavi SDH formazanı parlar; mitokondriyal miyopatiler için çok tipiktir."},
+{w:6,q:"Kemik dokusunda osteoklast aktivitesini göstermek için hangi enzim, osteoblast aktivitesini göstermek için hangi enzim kullanılır?",o:["Osteoklast: TRAP (Tartrata dirençli asit fosfataz) — Osteoblast: ALP (Alkalen fosfataz)","Osteoklast: ALP — Osteoblast: TRAP","Osteoklast: AChE — Osteoblast: SDH","Her ikisi için de Miyofibriller ATPaz"],a:0,e:"Osteoklastlar TRAP (asit fosfataz), osteoblastlar ise ALP (alkalen fosfataz) açısından zengindir."},
+{w:6,q:"DAB (Diaminobenzidin) kromojeni kullanılarak yapılan bir peroksidaz reaksiyonunda hangi uyarıya dikkat edilmelidir?",o:["Dokudaki endojen peroksidaz aktivitesi (eritrosit, miyeloid hücreler) antikor bağlı İHK reaksiyonuyla karıştırılmamalıdır","DAB sadece floresans mikroskobunda görülür","DAB mavi renkli formazan oluşturur","DAB lipidleri eritir"],a:0,e:"DAB hem enzim histokimyasında (MPO) hem İHK'da (HRP) kahverengi ürün verir; İHK'da endojen peroksidaz bloke edilmezse yanlış pozitiflik yapar."},
+{w:6,q:"Karaciğerde safra kanaliküllerini gösteren ve adenozin-5'-fosfatı (AMP) substrat olarak kullanan spesifik fosfataz hangisidir?",o:["5'-Nükleotidaz (5'-NT)","Glukoz-6-fosfataz (G6Paz)","Miyofibriller ATPaz","Kloroasetat esteraz"],a:0,e:"5'-Nükleotidaz plazma membranı ve safra kanaliküllerinde AMP'yi hidrolize eder."},
+
+// Hafta 7 (10 Soru)
+{w:7,q:"İmmünohistokimya (İHK) yöntemini 1940’lı yıllarda antikorları flüoresan boya ile işaretleyerek ilk kez uygulayan bilim insanı kimdir?",o:["Albert H. Coons ve arkadaşları","Köhler ve Milstein","Gomori","McManus"],a:0,e:"Coons ve ark. 1940'larda floresan işaretli antikorlarla İHK'nın temelini atmıştır (Köhler ve Milstein 1975'te monoklonal antikoru bulmuştur)."},
+{w:7,q:"İmmünohistokimyada hedef antijenlerin beklenen hücresel yerleşimleri (boyanma paternleri) için hangi eşleştirme doğrudur?",o:["Nükleer: ER, PR, Ki-67, TTF-1 — Membran: HER2, CD20, E-cadherin — Sitoplazmik: Sitokeratin, Desmin, ALK","Nükleer: HER2, CD20 — Membran: Ki-67, TTF-1 — Sitoplazmik: ER, PR","Nükleer: Sitokeratin — Membran: Desmin — Sitoplazmik: TTF-1","Hepsi yalnızca hücre çekirdeğini boyar"],a:0,e:"Boyanma paterni yorumun ayrılmaz parçasıdır: Ki-67/ER/PR/TTF-1 çekirdekte, HER2/CD20/E-cadherin membranda, CK/Desmin/ALK sitoplazmada aranır."},
+{w:7,q:"Antijen üzerinde antikorun doğrudan tanıdığı ve bağlandığı özgül aminoasit dizisine ne ad verilir?",o:["Epitop (Antijenik belirleyici)","Paratop","Fc bölgesi","Hapten"],a:0,e:"Antijen üzerindeki hedef bölgeye epitop, antikor üzerindeki bağlanma bölgesine ise paratop denir."},
+{w:7,q:"İmmünoglobulin (antikor) molekülleri hangi hücreler tarafından üretilir ve temel zincir yapısı nasıldır?",o:["B lenfositlerden farklılaşan plazma hücreleri — 2 ağır ve 2 hafif zincirden oluşan 4 zincirli yapı","T lenfositler — 1 ağır ve 3 hafif zincir","Makrofajlar — Tek polipeptid zinciri","Eritrositler — Beta pileli tabaka"],a:0,e:"T hücreleri antikor salgılamaz. İmmünoglobulinler B hücre kökenli plazma hücrelerinin ürünüdür ve 2 ağır + 2 hafif zincirden oluşur."},
+{w:7,q:"İmmünoglobulinin 5 sınıfı (IgG, IgM, IgA, IgD, IgE) içinden immünohistokimyada en sık kullanılanı hangisidir ve antijene bağlanan ucu neresidir?",o:["IgG — Fab bölgesi","IgM — Fc bölgesi","IgE — Ağır zincir kuyruğu","IgA — Disülfit bağı"],a:0,e:"İHK'da en yaygın kullanılan sınıf IgG'dir; antijeni Fab (antigen-binding fragment) bölgesi bağlar."},
+{w:7,q:"1975 yılında Köhler ve Milstein tarafından geliştirilen monoklonal antikor üretiminde 'Hibridoma' hücreleri hangi iki hücrenin kaynaştırılmasıyla (füzyonuyla) elde edilir?",o:["Antijenle immünize edilmiş fare dalağından alınan B lenfositler (antikor üretme yeteneği) + Myelom kanser hücreleri (kültürde sonsuz bölünme yeteneği)","T lenfositler + Fibroblastlar","Tavşan eritrositleri + Karaciğer hücreleri","Makrofajlar + Epitel hücreleri"],a:0,e:"B lenfosit özgül antikor üretir ama kültürde ölür; myelom hücresi ise ölümsüzdür. İkisinin birleşimi olan hibridoma sınırsız monoklonal antikor üretir."},
+{w:7,q:"Monoklonal antikorlar ile poliklonal antikorların karşılaştırılması hakkında hangisi doğrudur?",o:["Monoklonal antikorlar tek bir epitopa bağlandığı için özgüllüğü çok yüksektir ancak boyanma şiddeti daha zayıf olabilir; poliklonal antikorlar ise çoklu epitopa bağlandığından daha güçlü boyar fakat çapraz reaksiyon/zemin riski yüksektir","Poliklonal antikorlar hibridoma tekniğiyle üretilir ve tek bir epitopa bağlanır","Monoklonal antikorlarda çapraz reaksiyon olasılığı %0’dır, asla görülmez","Poliklonal antikorların özgüllüğü monoklonalden çok daha yüksektir"],a:0,e:"Monoklonal tek epitopa özgüldür (yüksek özgüllük, daha zayıf sinyal); poliklonal birçok epitopu tanır (yüksek duyarlılık/avidite, yüksek zemin riski)."},
+{w:7,q:"Antikorun bağlanma bölgesinin spesifik antijen üzerindeki epitopa olan uyumu/ilgisi (1) ile antijen-antikor kompleksinin yıkama sırasında akmamasını sağlayan toplam bağlanma kuvveti (2) sırasıyla nasıl adlandırılır?",o:["1: Afinite — 2: Avidite","1: Avidite — 2: Titre","1: Titre — 2: Afinite","1: Özgüllük — 2: Duyarlılık"],a:0,e:"Afinite tek bir bağın ilgisi/uyumudur; Avidite ise toplam bağlanma kuvvetidir (yıkamada kesitten akmamasını sağlar)."},
+{w:7,q:"İyi bir antikorda 'Yüksek Titre (Konsantrasyon)' neden istenen bir özelliktir?",o:["Yüksek dilüsyon (sulandırma) oranları kullanılmasına olanak tanıyarak, antiserum içindeki istenmeyen (nonspesifik) antikorların seyreltilip zemin boyanmasının azaltılmasını sağlar","Antikorun sulandırılmadan konsantre kullanılmasını zorunlu kılar","Kesitlerin fiksasyon süresini kısaltır","Antijen geri kazanımı ihtiyacını ortadan kaldırır"],a:0,e:"Yüksek titre sayesinde antikor çok sulandırılabilir; böylece istenmeyen doğal antikorlar etkisiz düzeye iner."},
+{w:7,q:"Poliklonal bir antiserumun spesifikliğini (özgüllüğünü) test etmek için aşağıdaki yöntemlerden hangileri kullanılabilir?",o:["ELISA, RIA (Radio Immuno Assay) veya Blotting tekniği","Sadece rutin H&E boyaması","Von Kossa ve Perls","Kriyostat kesiti"],a:0,e:"Elde edilen antiserumun özgüllüğü ELISA, RIA veya Western Blotting ile kontrol edilir."}
+];
+
+/* ===================== KAVRAM KARTLARI (66 KART) ===================== */
+const CARDS = [
+[2,"PAS (Periodik Asit Schiff)","Periodik asit 1,2-glikol gruplarını aldehite okside eder; Schiff reaktifi bağlanarak parlak MAGENTA renk verir. Glikojen, nötral müsin, bazal membran ve mantarları boyar."],
+[2,"PAS–Diastaz (PAS-D)","Alfa-amilaz (diastaz) glikojeni sindirir. PAS(+) olan materyal PAS-D'de kayboluyorsa GLİKOJEN olduğu doğrulanır."],
+[2,"Alcian Blue pH 2,5","Bakır içeren katyonik boyadır. pH 2,5'te hem karboksilli (sialomüsin) hem sülfatlı (sülfomüsin) asidik müsinleri MAVİ boyar. Kontrol: Bağırsak goblet hücreleri."],
+[2,"Alcian Blue pH 1,0","pH 1,0'da karboksil grupları iyonize olamaz; yalnızca güçlü sülfatlı asidik müsinler (sülfomüsinler) MAVİ boyanır."],
+[2,"Kombine AB–PAS","Önce Alcian Blue pH 2,5, sonra PAS uygulanır. Asidik müsin MAVİ, nötral müsin MAGENTA, karışık müsin MOR/KOYU MAVİ görünür."],
+[2,"Müsikarmin","Karmin + alüminyum kompleksidir. Epitelyal asidik müsini (adenokarsinom) ve Cryptococcus neoformans kapsülünü KOYU PEMBE / KIRMIZI boyar."],
+[2,"Best Karmini","Glikojen gösterimi için tarihsel olarak kullanılan kırmızı boyama yöntemi (günümüzde yerini PAS-D almıştır)."],
+[2,"Kolloidal Demir","Pozitif yüklü demir iyonlarının asidik müsinlere bağlanıp Prusya mavisi reaksiyonuyla MAVİ görünürleştirilmesi."],
+[2,"Kromafin Reaksiyon","Adrenal medulla ve paraganglion granüllerinin dikromatlı fiksatiflerle sarı-kahverengi görülmesi (Modifiye Giemsa, Schmorl, Wiesel)."],
+[2,"Argentafin Reaksiyon","Hücrelerin (bağırsak karsinoid tümörü, melanin) dışarıdan indirgeyici olmadan amonyaklı gümüşü doğrudan SİYAHA indirgemesi (Fontana-Masson, Diazo)."],
+[2,"Arjirofil Reaksiyon","Hücrelerin veya retiküler liflerin gümüşü bağlaması ancak metalik gümüşe indirgemek için dışarıdan indirgeyici madde gerektirmesi (Grimelius - Bouin, Pascual)."],
+[3,"Masson Trikrom","Kollajen lifleri MAVİ veya YEŞİL, kas ve sitoplazmayı KIRMIZI, çekirdeği SİYAH gösterir. Fibrozis ve skar değerlendirmesinde kullanılır."],
+[3,"Gomori Trikrom","Kollajeni YEŞİL veya MAVİ, kas liflerini KIRMIZI gösterir. Tek adımlı trikromdur; kas biyopsilerinde de (ragged red fiber) kullanılır."],
+[3,"Van Gieson","Asit fuksin kollajeni KIRMIZI, pikrik asit ise kas ve sitoplazmayı SARI boyar."],
+[3,"Picrosirius Red","Kollajeni kırmızı boyar; polarize ışık mikroskobunda kollajen liflerinin ÇİFT KIRILMA özelliğini belirginleştirir."],
+[3,"Verhoeff–Van Gieson (VVG)","Elastik lifleri SİYAH, kollajeni kırmızı, diğer dokuları sarı boyar. Aort ve damar duvarı elastik lamelleri için idealdir."],
+[3,"Orsein & Weigert Elastik","Elastik lifleri Orsein KAHVERENGİ, Weigert resorsin fuksin ve Gomori aldehit fuksin ise MOR-KOYU MOR renkte boyar."],
+[3,"Gomori & Gordon-Sweets","Tip III kollajenden oluşan retiküler lifleri SİYAH gösteren arjirofilik gümüşleme yöntemleridir (Karaciğer çatısı ve kemik iliği fibrozisi)."],
+[3,"Toluidin Mavisi (Metakromazi)","Mast hücresi granüllerindeki sülfatlı GAG'lara (heparin) bağlanarak mavi yerine MOR-KIRMIZI metakromatik görünüm oluşturur."],
+[3,"Oil Red O","Taze dondurulmuş (kriyostat) kesitte nötral trigliseridleri ve lipidleri PARLAK KIRMIZI boyar. Sulu kapatma ortamı şarttır."],
+[3,"Sudan Black B & Sudan III/IV","Dondurulmuş kesitte Sudan Black B nötral yağ ve fosfolipidleri MAVİ-SİYAH; Sudan III/IV ise nötral lipidleri TURUNCU-KIRMIZI boyar."],
+[3,"Osmiyum Tetroksit (OsO₄)","Doymamış lipid bağlarını ve miyelini hem fikse eder hem SİYAHA boyar. Buharı göz ve solunum için çok toksiktir; çeker ocakta kullanılır."],
+[3,"Congo Red (Amiloid)","Beta-tabakalı ekstrasellüler amiloid fibrillerini 8-10 µm kesitte normal ışıkta SOMON-KIRMIZI, polarize ışıkta ELMA YEŞİLİ çift kırılma ile gösterir."],
+[3,"Thioflavin T / S","Amiloidi floresans mikroskobunda sarı-yeşil floresans ile gösteren tamamlayıcı yöntem (özgüllüğü Congo red'den düşüktür)."],
+[3,"Krezil Viyole (Nissl Boyası)","Nöron gövdesindeki granüllü ER ve ribozomlardan zengin Nissl maddesini MOR-MAVİ boyar; kromatoliz ve nöron kaybını gösterir."],
+[3,"Luxol Fast Blue (LFB)","Sinir dokusunda miyelin fosfolipitlerini MAVİ boyar (demiyelinizasyon alanları soluk kalır). Kritik basamağı diferansiyasyondur."],
+[3,"Bielschowsky & Bodian","Sinir dokusunda akson, nörofibril, senil plak ve nörofibriler yumakları SİYAH gösteren gümüşleme yöntemleridir (Bodian protargol kullanır)."],
+[3,"PTAH","Fosfotungstik asit hematoksilen; glial lifleri (gliozis), fibrini ve çizgili kası MAVİ tonlarda gösterir."],
+[3,"Pikrik Asit Güvenliği","Van Gieson ve Bouin içinde bulunur; kuruduğunda PATLAYICI olduğu için laboratuvarda asla kurutulmaz."],
+[4,"Hemosiderin & Perls Prusya Mavisi","H&E'de altın-kahverengi granüllerdir. Perls yönteminde HCl + potasyum ferrosiyanür ile ferrik demir (Fe³⁺) KOYU MAVİ boyanır (Hemoglobini boyamaz!)."],
+[4,"Safra (Bilirubin) & Hall–Fouchet","Fouchet reaktifi bilirubini biliverdine oksitleyerek YEŞİL / ZEYTİN YEŞİLİ renk oluşturur. Kontrol: Kolestatik karaciğer."],
+[4,"Porfirin","Taze veya dondurulmuş kesitte UV (floresans) mikroskobu altında PARLAK KIRMIZI otofloresans verir."],
+[4,"Lipofuskin (Yaşlılık Pigmenti)","Kalp, karaciğer ve nöronda perinükleer sarı-kahverengi lizozomal artık pigmenti. Schmorl ile MAVİ-YEŞİL, Sudan Black B ile MAVİ-SİYAH, UV'de sarı-turuncu floresans."],
+[4,"Melanin & Bleaching (Ağartma)","Fontana-Masson ile SİYAH boyanır (argentafin). Potasyum permanganat veya H₂O₂ ile ağartıldığında (bleaching) rengi KAYBOLUR."],
+[4,"Ürat Kristalleri (Gut)","Sulu formalinde erir! %95 etanol veya mutlak alkolde fikse edilmelidir. Polarize ışıkta iğne biçimli kristaller NEGATİF ÇİFT KIRILMA gösterir."],
+[4,"Von Kossa","Kalsiyumu doğrudan göstermez; kalsiyuma bağlı FOSFAT ve KARBONAT anyonlarını gümüşleme ile SİYAH gösterir."],
+[4,"Alizarin Red S","pH 4,2–4,5'te doğrudan KALSİYUM katyonlarıyla kompleks oluşturarak TURUNCU-KIRMIZI boyanma verir."],
+[4,"Rhodanine & Rubeanik Asit","Wilson hastalığında bakır (Cu) birikimini gösterir: Rhodanine TURUNCU-KIRMIZI, Rubeanik asit YEŞİLİMSİ SİYAH."],
+[4,"Karbon (Antrakoz)","Akciğer ve lenf nodunda siyah eksojen pigment. Perls NEGATİFTİR ve ağartma (bleaching) ile KAYBOLMAZ."],
+[4,"Ferruginöz Cisim (Asbest)","Altın kahverengi, boncuklu/halter biçimli lifler. Demir-protein kılıfı nedeniyle Perls POZİTİFTİR (MAVİ). Kesin doğrulama SEM-EDS ile yapılır."],
+[4,"Asit Formalin Hematini","Asidik formalinde (pH < 6) oluşan koyu kahverengi-siyah çökelti artefaktı. %10 Nötral Tamponlu Formalin (NBF) kullanılarak önlenir."],
+[4,"Cıva Pigmenti Artefaktı","Cıvalı fiksatif (Zenker, B5) sonrası oluşan kahverengi-siyah granüller; kesitlere İYOT (Lugol) ve TİYOSÜLFAT uygulanarak giderilir."],
+[5,"Enzim Histokimyası vs İHK","Enzim histokimyası katalitik AKTİVİTEYİ (işlevi) gösterir; İHK ise enzim PROTEİNİNİN varlığını gösterir."],
+[5,"Soğuk İzopentan ile Dondurma","Kas biyopsisi doğrudan sıvı azota atılırsa çatlak/buz artefaktı oluşur; bu yüzden sıvı azotla soğutulmuş izopentanda hızla dondurulur."],
+[5,"Metal Yakalama Sistemi","Enzimin kopardığı fosfat iyonu metal tuzuyla (Ca, Co, Pb) çökeltilir ve sülfidle siyah/kahverengi görünür ürüne dönüştürülür (Gomori ALP/ACP, ATPaz)."],
+[5,"Azo Eşleşmesi Sistemi","Enzimin açığa çıkardığı naftol, diazonyum tuzuyla birleşerek çözünmez kırmızı/kahverengi azo boya oluşturur (ALP, ACP, NSE)."],
+[5,"Tetrazolyum İndirgenmesi","Dehidrogenazların (NADH-TR, SDH) aktardığı elektronlar tetrazolyum tuzunu çözünmez mavi FORMAZAN çökeltisine indirger."],
+[5,"Substratsız Kontrol","İnkübasyon ortamına substrat konmaz; kromojenin substrattan bağımsız nonspesifik çöküp çökmediğini kontrol eder."],
+[5,"Alkalen Fosfataz (ALP)","Optimum pH 9,0–9,6. Hücre membranı, böbrek fırçamsı kenarı ve osteoblastlarda bulunur. Gomori yönteminde kalsiyum + kobalt sülfid kullanılır."],
+[5,"Asit Fosfataz (ACP) & TRAP","Optimum pH 4,7–5,0. Lizozom, makrofaj, prostat ve nekrotik kas liflerinde bulunur. Gomori'de kurşun sülfid kullanılır; tartrat ile TRAP ayrılır."],
+[6,"Miyofibriller ATPaz pH 9,4","Alkali ön inkübasyonda Tip I (yavaş) kas lifleri AÇIK, Tip II (hızlı) kas lifleri KOYU boyanır."],
+[6,"Miyofibriller ATPaz pH 4,2–4,3","Asidik ön inkübasyonda Tip I kas lifleri KOYU, Tip II kas lifleri AÇIK boyanır (pH 4,6 ise IIA ve IIB'yi ayırır)."],
+[6,"Lif Tipi Gruplaşması","Kas biyopsisinde normal dama tahtası dağılımının kaybolup aynı tip liflerin kümelenmesi; nörojenik yeniden innervasyonu gösterir."],
+[6,"Alfa-Naftil Asetat Esteraz (NSE)","Monositik seride güçlü pozitiftir (kırmızı-kahverengi). Sodyum florür (NaF) ile inhibe olması monositik kökeni doğrular."],
+[6,"Asetilkolinesteraz (AChE)","Taze rektal biyopside lamina propriada artmış AChE(+) sinir lifleri ve submukozal hipertrofik sinirler Hirschsprung hastalığı lehinedir."],
+[6,"NADH-TR","Hem mitokondriyi hem sarkoplazmik retikulumu mavi boyar (mitokondriye özgül değildir). Target lif, central core ve moth-eaten iç mimari bozukluklarını gösterir."],
+[6,"SDH (Süksinat Dehidrogenaz)","Mitokondri Kompleks II'yi gösterir (mitokondriye özgüldür). Subsarkolemmal mitokondri birikimi olan lifleri koyu mavi boyar."],
+[6,"COX ve Birleşik COX–SDH","COX (Kompleks IV) normal lifleri kahverengi boyar. COX-SDH'de COX negatif ama SDH pozitif (solunum zinciri bozuk) lifler parlak MAVİ görünür."],
+[7,"Albert H. Coons (1940'lar)","Antikoru flüoresan boya ile işaretleyerek immünohistokimyayı ilk kez uygulayan araştırmacı."],
+[7,"Hedef Antijen Yerleşimleri","Nükleer: ER, PR, Ki-67, TTF-1 · Membran: HER2, CD20, E-cadherin · Sitoplazmik: Sitokeratin, Desmin, ALK · Golgi: CD15."],
+[7,"Epitop ve Paratop","Epitop: Antijen üzerinde antikorun tanıdığı özgül dizi. Paratop: Antikorun Fab ucundaki antijen bağlama bölgesi."],
+[7,"İmmünoglobulin (Ig) Yapısı","B lenfosit kökenli plazma hücreleri üretir. 2 ağır + 2 hafif = 4 zincirden oluşur. İHK'da en sık IgG sınıfı kullanılır."],
+[7,"Poliklonal Antikor","İmmünize hayvan serumundan (antiserum) elde edilir; farklı epitoplara bağlanır. Duyarlılığı/aviditesi yüksektir ama çapraz reaksiyon ve zemin riski fazladır."],
+[7,"Monoklonal Antikor (Hibridoma)","Köhler & Milstein (1975): Fare dalak B lenfositi + Myelom kanser hücresi füzyonu. Tek bir epitopa kesin özgüldür, zemin temizdir."],
+[7,"Afinite, Avidite ve Titre","Afinite: Tek bağın uyumu/ilgisi · Avidite: Yıkamada akmayı önleyen toplam bağlanma kuvveti · Titre: Yüksek dilüsyon sağlayan konsantrasyon."]
+];
+
+/* ===================== KOPYA KAĞIDI ===================== */
+const CHEATS = [
+  {w:2, tag:"Hafta 2 · Karbonhidrat & Müsin", title:"PAS · PAS-D · Alcian Blue · Müsikarmin", body:`
+    <div class="fbox">PAS Kimyası: 1,2-glikol → Periodik Asit (Oksidasyon) → Aldehit + Schiff Reaktifi → Parlak MAGENTA</div>
+    <table class="mini-tbl">
+      <tr><th>Hedef Madde</th><th>Yöntem</th><th>Pozitif Renk & Kritik Özellik</th></tr>
+      <tr><td><b>Glikojen</b> (Karaciğer, kas)</td><td><b>PAS + PAS-Diastaz</b></td><td>PAS ile <b>Magenta</b>; Diastaz (alfa-amilaz) sonrası <b>kaybolur!</b> (Suda çözünür)</td></tr>
+      <tr><td><b>Nötral Müsin</b> (Mide epiteli)</td><td><b>PAS</b></td><td><b>Magenta</b> (Diastaza dirençlidir, Alcian Blue ile boyanmaz)</td></tr>
+      <tr><td><b>Asidik Müsin</b> (Sialo + Sülfo)</td><td><b>Alcian Blue pH 2,5</b></td><td><b>Mavi</b> — Hem karboksil (<code>COO⁻</code>) hem sülfat (<code>SO₃⁻</code>) iyonize olur</td></tr>
+      <tr><td><b>Güçlü Sülfatlı Müsin</b></td><td><b>Alcian Blue pH 1,0</b></td><td><b>Mavi</b> — Karboksil baskılanır, sadece sülfatlı müsinler boyanır</td></tr>
+      <tr><td><b>Karışık Müsin</b></td><td><b>Kombine AB–PAS</b></td><td>Önce AB pH 2,5 sonra PAS → Asidik <b>Mavi</b>, Nötral <b>Magenta</b>, Karışık <b>Mor</b></td></tr>
+      <tr><td><b>Epitelyal Müsin & Cryptococcus</b></td><td><b>Müsikarmin</b></td><td><b>Koyu Pembe / Kırmızı</b> (Alüminyum + karmin; adenokarsinom ve mantar kapsülü)</td></tr>
+    </table>
+    <div class="tip"><b>Kontroller:</b> PAS/PAS-D = Karaciğer veya Böbrek (bazal membran/fırçamsı kenar) · Alcian Blue & Müsikarmin = Kolon / İnce bağırsak (Goblet hücresi).</div>
+  `},
+  {w:2, tag:"Hafta 2 · Biyolojik Amin & Melanin", title:"Kromafin · Argentafin · Arjirofil Ayrımı", body:`
+    <table class="mini-tbl">
+      <tr><th>Grup</th><th>Kimyasal İlke</th><th>Örnek Doku / Tümör</th><th>Yöntemler</th></tr>
+      <tr><td><b>Kromafin</b></td><td><b>Dikromat</b> solüsyonu ile fikse edilince sarı-kahverengi granül</td><td><b>Adrenal medulla</b>, ekstraadrenal paraganglion (epinefrin/norepinefrin)</td><td><b>Modifiye Giemsa, Schmorl, Wiesel</b></td></tr>
+      <tr><td><b>Argentafin</b></td><td>Formalin sonrası dış indirgeyici olmadan gümüşü/bakırı <b>doğrudan kendisi indirger</b></td><td><b>Bağırsak karsinoid tümörleri</b> (serotonin) ve <b>Melanin</b></td><td><b>Fontana–Masson</b>, Diazo tuzları, Schmorl, Otofloresan</td></tr>
+      <tr><td><b>Arjirofil</b></td><td>Metal iyonunu bağlar ama indirgemek için <b>dışarıdan indirgeyici basamak şarttır</b></td><td>Nöroendokrin hücreler (ve bağ dokudaki retiküler lifler)</td><td><b>Grimelius</b> (Bouin fiksatifi tercih edilir), <b>Pascual</b></td></tr>
+    </table>
+    <div class="tip"><b>Melanin Boyaları:</b> Normalde deri, göz, substantia nigra; patolojik olarak <b>melanomda</b> bulunur. <b>Fontana–Masson</b> (siyah) ve <b>Schmorl</b> (mavi-yeşil) ile boyanır.</div>
+  `},
+  {w:3, tag:"Hafta 3 · Bağ Dokusu Lifleri", title:"Kollajen · Elastik · Retiküler · Mast Hücresi", body:`
+    <table class="mini-tbl">
+      <tr><th>Hedef Lif / Hücre</th><th>Yöntem</th><th>Hedefin Rengi</th><th>Karşıt Boya / Önemli Not</th></tr>
+      <tr><td><b>Kollajen</b> (Tip I/III)</td><td><b>Masson / Gomori Trikrom</b></td><td><b>Mavi</b> veya <b>Yeşil</b></td><td>Kas/sitoplazma <b>Kırmızı</b>, Çekirdek <b>Siyah</b> (Fibrozis, skar)</td></tr>
+      <tr><td><b>Kollajen</b></td><td><b>Van Gieson</b></td><td><b>Kırmızı</b> (Asit fuksin)</td><td>Kas ve sitoplazma <b>Sarı</b> (Pikrik asit)</td></tr>
+      <tr><td><b>Kollajen</b></td><td><b>Picrosirius Red</b></td><td><b>Kırmızı</b></td><td>Polarize ışıkta kollajen <b>çift kırılmasını</b> güçlendirir</td></tr>
+      <tr><td><b>Elastik Lif</b> (Aort, akciğer)</td><td><b>Verhoeff–Van Gieson</b><br><b>Orsein</b><br><b>Weigert / Gomori Aldehit</b></td><td>VVG: <b>Siyah</b><br>Orsein: <b>Kahverengi</b><br>Weigert/Gomori: <b>Mor</b></td><td>VVG'de kollajen kırmızı, kas sarı</td></tr>
+      <tr><td><b>Retiküler Lif</b> (Tip III)</td><td><b>Gomori / Gordon-Sweets</b></td><td><b>Siyah</b> (Gümüşleme)</td><td><b>Arjirofiliktir!</b> (Oksidasyon → Sensitizasyon → Gümüşleme → İndirgeme → Tonlama)</td></tr>
+      <tr><td><b>Mast Hücresi Granülü</b></td><td><b>Toluidin Mavisi</b></td><td><b>Mor–Kırmızı</b></td><td>Sülfatlı GAG (heparin) nedeniyle <b>Metakromazi</b></td></tr>
+    </table>
+  `},
+  {w:3, tag:"Hafta 3 · Yağ, Amiloid & Sinir", title:"Lipid Boyaları · Congo Red · Nöropatoloji", body:`
+    <ul>
+      <li><b>Yağ (Lipid) İlkesi:</b> Parafin takibindeki <b>alkol ve ksilen yağları çözer</b> (H&E'de boş vakuol kalır). Bu yüzden <b>taze dondurulmuş (kriyostat) kesit + sulu kapatma</b> şarttır! Boyama fiziksel çözünmeyle olur.</li>
+      <li><b>Lipid Renkleri:</b> <b>Oil Red O</b> = Nötral yağ <b>Kırmızı</b> · <b>Sudan III/IV</b> = <b>Turuncu-kırmızı</b> · <b>Sudan Black B</b> = Nötral yağ + fosfolipit <b>Mavi-siyah</b> · <b>Osmiyum Tetroksit</b> = Doymamış yağ + miyelini hem fikse eder hem <b>Siyah</b> boyar (Buharı çok toksiktir, <b>çeker ocak</b> şart!).</li>
+      <li><b>Amiloid (Congo Red):</b> Beta-tabakalı hücre dışı protein fibrili. <b>8–10 µm kalın kesit</b> alınır; ışık mikroskobunda <b>somon-pembe/kırmızı</b>, polarize ışıkta <b>ELMA YEŞİLİ çift kırılma</b> verir! (Varlığını doğrular, protein tipini belirlemez).</li>
+    </ul>
+    <table class="mini-tbl">
+      <tr><th>Sinir Dokusu Hedefi</th><th>Yöntem</th><th>Görünüm & Tanısal Not</th></tr>
+      <tr><td><b>Nissl Cisimcikleri</b> (rRNA)</td><td><b>Krezil Viyole</b>, Toluidin mavisi</td><td>Nöron gövdesi <b>Mor-mavi</b> (Hasarda <b>kromatoliz</b> değerlendirilir)</td></tr>
+      <tr><td><b>Miyelin Kılıfı</b></td><td><b>Luxol Fast Blue (LFB)</b> / Osmiyum</td><td>LFB: Miyelin <b>Mavi</b> (Diferansiyasyon kritik!). Osmiyum: Miyelin <b>Siyah</b></td></tr>
+      <tr><td><b>Akson & Nörofibril</b></td><td><b>Bielschowsky</b> / <b>Bodian</b></td><td>Gümüşleme ile akson, senil plak ve nörofibriler yumaklar <b>Siyah</b> (Bodian = Protargol)</td></tr>
+      <tr><td><b>Glial Lifler (Gliozis)</b></td><td><b>PTAH</b> (Güncelde GFAP İHK)</td><td>Glial fibriller, fibrin ve kas çizgilenmesi <b>Mavi</b></td></tr>
+    </table>
+    <div class="tip"><b>Güvenlik:</b> <b>Pikrik asit</b> kurutulmaz (patlayıcıdır)! <b>Osmiyum</b> çeker ocakta kullanılır! <b>Gümüş/krom</b> atıkları ayrı toplanır!</div>
+  `},
+  {w:4, tag:"Hafta 4 · Pigmentler ve Mineraller", title:"Hemosiderin · Safra · Melanin · Lipofuskin · Kalsiyum · Ürat", body:`
+    <table class="mini-tbl">
+      <tr><th>Şüphe / Madde</th><th>İlk Yöntem</th><th>Pozitif Sonuç</th><th>Kritik Sınırlılık & Tuzak</th></tr>
+      <tr><td><b>Hemosiderin (Fe³⁺)</b></td><td><b>Perls Prusya Mavisi</b><br>(HCl + Ferrosiyanür)</td><td><b>Koyu Mavi</b></td><td>Sadece ferrik (Fe³⁺) demiri boyar; <b>hemoglobini doğrudan boyamaz!</b> (Ferruginöz cisim/asbest kılıfı da Perls pozitiftir)</td></tr>
+      <tr><td><b>Safra (Bilirubin)</b></td><td><b>Hall–Fouchet</b></td><td><b>Yeşil / Zeytin yeşili</b></td><td>Bilirubin biliverdine oksitlenir (Kontrol: Kolestatik karaciğer)</td></tr>
+      <tr><td><b>Melanin</b></td><td><b>Fontana–Masson + Bleaching</b></td><td><b>Siyah</b>; ağartma ile <b>kaybolur</b></td><td>Fontana tek başına özgül değildir; permanganat/H₂O₂ ağartması melanini siler</td></tr>
+      <tr><td><b>Karbon (Antrakoz)</b></td><td>Dışlama (Perls & Bleaching)</td><td>Siyah kalır</td><td><b>Perls negatiftir ve ağartma (bleaching) ile ASLA kaybolmaz!</b></td></tr>
+      <tr><td><b>Lipofuskin</b></td><td><b>Schmorl</b> / <b>Sudan Black B</b></td><td>Mavi-yeşil / Mavi-siyah</td><td>Perinükleer yaşlılık pigmenti; <b>sarı-turuncu otofloresans</b> verir (Seroid asit-fast+)</td></tr>
+      <tr><td><b>Porfirin</b></td><td>UV Floresans (Frozen kesit)</td><td><b>Parlak Kırmızı floresans</b></td><td>Floresans hızla solar</td></tr>
+      <tr><td><b>Ürat Kristalleri (Gut)</b></td><td><b>Polarize Işık</b></td><td><b>Negatif çift kırılma</b></td><td><b>Sulu formalinde çözünür!</b> Mutlaka <b>%95 etanol / mutlak alkol</b> ile fikse edilmeli</td></tr>
+      <tr><td><b>Kalsiyum (Ca²⁺)</b></td><td><b>Von Kossa</b><br><b>Alizarin Red S</b></td><td>Von Kossa: <b>Siyah</b><br>Alizarin: <b>Turuncu-kırmızı</b></td><td><b>Von Kossa kalsiyumu değil, bağlı FOSFAT/KARBONAT anyonunu gösterir!</b> Alizarin (pH 4,2-4,5) doğrudan Ca²⁺ bağlar</td></tr>
+      <tr><td><b>Bakır (Wilson)</b></td><td><b>Rhodanine</b> / <b>Rubeanik asit</b></td><td>Kırmızı / Yeşilimsi siyah</td><td>Doku dağılımı heterojen olabilir</td></tr>
+    </table>
+    <div class="tip"><b>Artefakt Pigmentleri:</b> <b>Asit formalin hematini</b> → Nötral tamponlu formalinle önlenir · <b>Cıva pigmenti</b> → İyot + Tiyosülfat ile silinir · <b>Krom pigmenti</b> → İyi yıkama · <b>Boya çökeltisi</b> (odak dışı tanecik) → Boyayı süzme.</div>
+  `},
+  {w:5, tag:"Hafta 5 · Enzim Histokimyası I", title:"Temel İlkeler · Dondurma · ALP vs ACP", body:`
+    <div class="fbox">Enzim Histokimyası = Katalitik Aktivite (İşlev) · İmmünohistokimya (İHK) = Enzim Proteini (Antijen)</div>
+    <ul>
+      <li><b>Doku Hazırlama:</b> Parafin takibindeki ısı (56–60 °C), alkol ve ksilen enzimleri inaktive eder. Bu yüzden <b>taze dondurulmuş (fresh frozen) kriyostat kesiti (7–10 µm)</b> şarttır!</li>
+      <li><b>Kas Dondurma Kuralı:</b> Kas dokusu doğrudan sıvı azota atılmaz (çatlak/buz artefaktı yapar); <b>sıvı azotla soğutulmuş izopentan</b> içinde hızla dondurulur!</li>
+      <li><b>3 Ana Reaksiyon Sistemi:</b> <b>1) Metal yakalama</b> (Fosfat + Ca/Co/Pb + Sülfid → Gomori ALP/ACP, ATPaz) · <b>2) Azo eşleşmesi</b> (Naftol + Diazonyum → Kırmızı/kahverengi azo boya) · <b>3) Tetrazolyum indirgenmesi</b> (Elektron → Çözünmez mavi <b>formazan</b>; NADH-TR, SDH).</li>
+      <li><b>Substratsız Kontrol:</b> Kromojen veya metalin enzimatik reaksiyondan bağımsız (nonspesifik) çöküp çökmediğini gösterir.</li>
+    </ul>
+    <table class="mini-tbl">
+      <tr><th>Enzim</th><th>Optimum pH</th><th>Yerleşim & Patolojik Kullanım</th><th>Gomori Metal Yakalama</th></tr>
+      <tr><td><b>Alkalen Fosfataz (ALP)</b></td><td><b>pH 9,0 – 9,6</b></td><td>Membran, böbrek fırçamsı kenar, <b>osteoblast</b>, kapiller</td><td>Kalsiyum → <b>Kobalt</b> → Kobalt sülfid (Kahve-siyah)</td></tr>
+      <tr><td><b>Asit Fosfataz (ACP)</b></td><td><b>pH 4,7 – 5,0</b></td><td><b>Lizozom, makrofaj</b>, prostat, nekrotik kas lifi, <b>osteoklast (TRAP)</b></td><td><b>Kurşun</b> → Kurşun sülfid (Siyah) · Tartrat kontrolü</td></tr>
+    </table>
+  `},
+  {w:6, tag:"Hafta 6 · Enzim Histokimyası II", title:"Kas Biyopsisi (ATPaz, NADH-TR, COX-SDH) · NSE · Hirschsprung", body:`
+    <table class="mini-tbl">
+      <tr><th>Kas Boyası / Koşul</th><th>Tip I Lif (Yavaş / Oksidatif)</th><th>Tip II Lif (Hızlı / Glikolitik)</th><th>Tanısal Yorum</th></tr>
+      <tr><td><b>ATPaz pH 9,4 (Alkali)</b></td><td><b>Açık (Soluk)</b></td><td><b>Koyu</b></td><td>Normalde <b>dama tahtası</b> dağılımı vardır</td></tr>
+      <tr><td><b>ATPaz pH 4,2–4,3 (Asit)</b></td><td><b>Koyu</b></td><td><b>Açık (Soluk)</b></td><td><b>Lif tipi gruplaşması</b> = Nörojenik reinnervasyon!</td></tr>
+      <tr><td><b>NADH-TR</b></td><td>Görece Koyu</td><td>Görece Açık</td><td>Mitokondri + <b>Sarkoplazmik retikulum</b> (Mitokondriye özgül değil! <b>Target lif, core, moth-eaten</b> iç mimariyi gösterir)</td></tr>
+      <tr><td><b>SDH (Kompleks II)</b></td><td>Görece Koyu Mavi</td><td>Görece Açık</td><td>Tamamen mitokondriye özgüldür (subsarkolemmal birikim)</td></tr>
+      <tr><td><b>Birleşik COX–SDH</b></td><td colspan="2">Normal lif: <b>Kahverengi</b> (COX+) · Patolojik lif: <b>Parlak Mavi</b> (COX− / SDH+)</td><td><b>Mavi lif</b> = COX (Kompleks IV) kaybı, mitokondriyal hastalık!</td></tr>
+    </table>
+    <ul>
+      <li><b>Alfa-Naftil Asetat Esteraz (NSE):</b> Kemik iliğinde <b>monositik</b> farklılaşmayı gösterir; <b>Sodyum Florür (NaF) ile inhibe olur!</b> (Granülositler için kloroasetat esteraz kullanılır).</li>
+      <li><b>Hirschsprung (AChE):</b> Submukoza içeren taze rektal biyopside <b>lamina propriada artmış AChE(+) sinir lifleri</b> tanısaldır. (Yenidoğan, çok distal/yüzeysel biyopsi ve total kolonik aganglionozda <b>yalancı negatif</b> olabilir!).</li>
+    </ul>
+  `},
+  {w:7, tag:"Hafta 7 · İmmünohistokimya (İHK)", title:"Coons · Ig Yapısı · Hibridoma · Afinite / Avidite / Titre", body:`
+    <ul>
+      <li><b>Tarihçe:</b> İlk kez 1940'larda <b>Albert H. Coons</b> floresan işaretli antikorla uyguladı. 1975'te <b>Köhler ve Milstein</b> hibridoma (monoklonal antikor) tekniğini geliştirdi.</li>
+      <li><b>Hücresel Yerleşim Paternleri:</b> <b>Nükleer:</b> <code>ER, PR, Ki-67, TTF-1</code> · <b>Membran:</b> <code>HER2, CD20, E-cadherin</code> · <b>Sitoplazmik:</b> <code>Sitokeratin, Desmin, ALK</code> · <b>Golgi:</b> <code>CD15</code>.</li>
+      <li><b>İmmünoglobulin (Antikor) Yapısı:</b> <b>B lenfosit → Plazma hücreleri</b> üretir (T hücreleri üretmez!). <b>2 ağır + 2 hafif = 4 zincir</b>. Antijeni <b>Fab</b> bölgesi tutar. 5 sınıf (IgG, IgM, IgA, IgD, IgE) içinden İHK'da en çok <b>IgG</b> kullanılır.</li>
+      <li><b>Antijen:</b> Hedef protein · <b>Epitop:</b> Antijen üzerindeki özgül bağlanma dizisi · <b>Paratop:</b> Antikorun bağlanan ucu.</li>
+    </ul>
+    <table class="mini-tbl">
+      <tr><th>Özellik</th><th>Poliklonal Antikor (Antiserum)</th><th>Monoklonal Antikor (Hibridoma)</th></tr>
+      <tr><td><b>Elde Edilişi</b></td><td>İmmünize hayvanın (tavşan/keçi) serumundan; farklı B hücre klonları</td><td><b>Fare dalak B lenfositi + Myelom kanser hücresi</b> füzyonu (tek klon)</td></tr>
+      <tr><td><b>Hedef Epitop</b></td><td>Antijenin <b>birden fazla</b> bölgesine bağlanır</td><td>Antijenin <b>yalnızca tek bir epitopuna</b> kesin özgüldür</td></tr>
+      <tr><td><b>Avantaj / Dezavantaj</b></td><td>Güçlü boyanma (yüksek avidite) ama <b>yüksek zemin / çapraz reaksiyon</b></td><td><b>Çok yüksek özgüllük, temiz zemin</b>, standart üretim; ama daha zayıf boyanma</td></tr>
+    </table>
+    <div class="tip"><b>İyi Antikorun 3 Özelliği:</b> <b>1) Afinite:</b> Tek bağın epitopa uyumu/ilgisi · <b>2) Avidite:</b> Yıkamada kesitten akmayı önleyen toplam bağlanma kuvveti · <b>3) Titre:</b> İstenmeyen antikorları yüksek dilüsyonla seyreltmeyi sağlayan yüksek konsantrasyon.</div>
+  `}
+];
+
+/* ===================== YARDIMCILAR ===================== */
+const $ = s => document.querySelector(s);
+const store = {
+  get(k, d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } },
+  set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+};
+const shuffle = a => { a = a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+const icon = (id, cls="i") => `<svg class="${cls}" aria-hidden="true"><use href="#i-${id}"/></svg>`;
+const wc = id => `--wc:var(--w${id})`;
+const wl = id => (WEEKS.find(w=>w.id===id)||{}).label || "Hafta "+id;
+CARDS.sort((a,b)=>a[0]-b[0]);
+const learned = new Set(store.get("plt209-learned", []));
+const totalTopics = WEEKS.reduce((n,w)=>n+w.topics.length,0);
+const RING = 263.9;
+const ringSvg = (pct, color="var(--pass)") => `<div class="ring"><svg viewBox="0 0 100 100"><circle class="track" cx="50" cy="50" r="42"/><circle class="val" cx="50" cy="50" r="42" stroke-dasharray="${RING}" stroke-dashoffset="${RING*(1-pct/100)}" style="stroke:${color}"/></svg><b>%${pct}</b></div>`;
+
+/* ===================== GÖRÜNÜMLER ===================== */
+const VIEWS = ["konular","test","kartlar","kopya"];
+function show(v, keepScroll){
+  if(!VIEWS.includes(v)) v = "konular";
+  VIEWS.forEach(x=>{ $("#view-"+x).hidden = x!==v; $("#tab-"+x).setAttribute("aria-selected", x===v); });
+  if(location.hash.slice(1)!==v){ try{ history.replaceState(null,"","#"+v); }catch(e){} }
+  if(!keepScroll) window.scrollTo(0,0);
+}
+document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>show(b.dataset.view)));
+document.querySelectorAll("[data-go]").forEach(b=>b.addEventListener("click",()=>show(b.dataset.go)));
+window.addEventListener("hashchange",()=>show(location.hash.slice(1)));
+const goWeek = id => document.getElementById("w"+id).scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"});
+function quizWeek(id){ quizState.scope = id; quizState.count = id==="all" ? 25 : "all"; startQuiz(); show("test"); }
+
+/* ===================== KONULAR ===================== */
+function renderStudy(){
+  $("#st-topics").textContent = totalTopics;
+  $("#st-qs").textContent = QS.length;
+  $("#st-cards").textContent = CARDS.length;
+
+  $("#weekgrid").innerHTML = WEEKS.map(w=>`<article class="wcard" style="${wc(w.id)}">
+    <span class="num">${w.short}</span>
+    <h3>${w.title}</h3>
+    <div class="meta"><span>${w.topics.length} başlık</span><span>${QS.filter(q=>q.w===w.id).length} soru</span></div>
+    <div class="mini" aria-hidden="true"><i id="mini-${w.id}"></i></div>
+    <div class="acts"><button data-read="${w.id}">Oku</button><button data-quiz="${w.id}">Test et</button></div>
+  </article>`).join("") + `<article class="wcard all" style="--wc:var(--primary)">
+    <span class="num">${icon("check-sq")}</span>
+    <h3>Genel Vize Deneme Sınavı (Hafta 2–7 Karışık)</h3>
+    <div class="meta"><span>Tüm sunumlardan</span><span>${QS.length} soruluk havuz</span></div>
+    <div class="acts"><button data-quiz="all">Karma sınava başla (25 soru)</button></div>
+  </article>`;
+
+  const rail = $("#rail");
+  WEEKS.forEach(w=>{
+    const b = document.createElement("button");
+    b.style.cssText = wc(w.id);
+    b.innerHTML = `<span class="dot" aria-hidden="true"></span><span class="nm">${w.label}: ${w.title}</span><span class="ct" id="ct-${w.id}"></span>`;
+    b.addEventListener("click",()=>goWeek(w.id));
+    rail.appendChild(b);
+  });
+
+  $("#weeks").innerHTML = WEEKS.map(w=>`<section class="week" id="w${w.id}" style="${wc(w.id)}">
+    <div class="week-head"><div class="t"><span class="eyebrow">${wl(w.id)} · PLT209</span><h2>${w.title}</h2><p>${w.sum}</p></div>
+      <button class="btn primary" data-quiz="${w.id}" style="background:var(--wc);border-color:var(--wc)">${icon("play")}Bu haftayı test et</button></div>
+    ${w.topics.map(t=>{ const id="learn-"+t.no.replace(".","-"); return `<article class="topic">
+      <div class="topic-h"><span class="no">${t.no}</span><h3>${t.t}</h3></div>
+      ${t.body}
+      <div class="hook">${icon("bulb")}<div><span class="hk">AKILDA KALSIN · SINAV KANCASI</span>${t.hook}</div></div>
+      <label class="learn" for="${id}"><input type="checkbox" id="${id}" data-no="${t.no}" ${learned.has(t.no)?"checked":""}> Öğrendim</label>
+    </article>`; }).join("")}
+  </section>`).join("");
+
+  const vk = $("#view-konular");
+  vk.addEventListener("change",e=>{
+    const c = e.target.closest("input[data-no]"); if(!c) return;
+    c.checked ? learned.add(c.dataset.no) : learned.delete(c.dataset.no);
+    store.set("plt209-learned",[...learned]); updateProgress();
+  });
+  vk.addEventListener("click",e=>{
+    const q = e.target.closest("[data-quiz]"); if(q) return quizWeek(q.dataset.quiz==="all" ? "all" : +q.dataset.quiz);
+    const r = e.target.closest("[data-read]"); if(r) goWeek(+r.dataset.read);
+  });
+  updateProgress();
+}
+function updateProgress(){
+  const pct = Math.round(learned.size/totalTopics*100);
+  $("#ov-txt").textContent = `${learned.size} / ${totalTopics} başlık öğrenildi`;
+  $("#ring-pct").textContent = "%"+pct;
+  $("#ring-val").setAttribute("stroke-dashoffset", RING*(1-pct/100));
+  WEEKS.forEach(w=>{
+    const d = w.topics.filter(t=>learned.has(t.no)).length, el = $("#ct-"+w.id);
+    el.textContent = `${d}/${w.topics.length}`; el.classList.toggle("done", d===w.topics.length);
+    $("#mini-"+w.id).style.width = (d/w.topics.length*100)+"%";
+  });
+}
+
+/* ===================== TEST ===================== */
+const quizState = { scope:"all", count:20, list:[], i:0, answers:[] };
+const LET = ["A","B","C","D"];
+function renderSetup(){
+  const best = store.get("plt209-best", {});
+  const scopes = [["all","Tümü",QS.length], ...WEEKS.map(w=>[w.id,wl(w.id),QS.filter(q=>q.w===w.id).length])];
+  const counts = [[10,"10 soru"],[20,"20 soru"],[35,"35 soru"],["all","Hepsi"]];
+  const pad = s => s + "&nbsp;".repeat(Math.max(0, 9 - s.length));
+  $("#quiz").innerHTML = `<div class="card setup">
+    <h2>Deneme sınavı</h2>
+    <p class="sub">Soru bankasında PDF sunumlarından ve ders sonu değerlendirme sorularından hazırlanmış <b>${QS.length}</b> çoktan seçmeli soru var. Şıklar her seferinde karışır.</p>
+    <div class="field"><span class="fl" id="lbl-sc">Kapsam</span><div class="chips" id="sc" role="group" aria-labelledby="lbl-sc">${scopes.map(([v,l,n])=>`<button class="chip" data-v="${v}" style="${v==="all"?"":wc(v)}" aria-pressed="${String(quizState.scope)===String(v)}">${v==="all"?"":'<span class="dot" aria-hidden="true"></span>'}${l}<small>${n}</small></button>`).join("")}</div></div>
+    <div class="field"><span class="fl" id="lbl-cn">Soru sayısı</span><div class="chips" id="cn" role="group" aria-labelledby="lbl-cn">${counts.map(([v,l])=>`<button class="chip" data-v="${v}" aria-pressed="${String(quizState.count)===String(v)}">${l}</button>`).join("")}</div></div>
+    <div class="field"><span class="fl">En iyi sonuçların</span><div class="runner">${scopes.map(([v,l])=>{const b=best[v];return `${pad(l)} ${b!=null?`<span class="${b>=70?"p":"f"}">${b>=70?"BAŞARILI":"TEKRAR ET"} %${b}</span>`:'<span class="m">henüz çözülmedi</span>'}`;}).join("<br>")}</div></div>
+    <div class="row" style="margin-top:22px"><button class="btn primary" id="go">${icon("play")}Sınavı başlat</button></div>
+  </div>`;
+  $("#sc").addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;quizState.scope=b.dataset.v==="all"?"all":+b.dataset.v;renderSetup();});
+  $("#cn").addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;quizState.count=b.dataset.v==="all"?"all":+b.dataset.v;renderSetup();});
+  $("#go").addEventListener("click",()=>startQuiz());
+}
+function startQuiz(list){
+  let pool = list || (quizState.scope==="all" ? QS : QS.filter(q=>q.w===quizState.scope));
+  pool = shuffle(pool);
+  if(!list && quizState.count!=="all") pool = pool.slice(0, quizState.count);
+  quizState.list = pool.map(q=>({...q, opts: shuffle(q.o.map((t,i)=>({t, ok:i===q.a})))}));
+  quizState.i = 0; quizState.answers = []; quizState.retry = !!list;
+  renderQ();
+}
+function renderQ(){
+  const s = quizState, q = s.list[s.i], n = s.list.length;
+  const wk = WEEKS.find(w=>w.id===q.w);
+  const p = s.answers.filter(a=>a.ok).length, f = s.answers.length - p;
+  $("#quiz").innerHTML = `<div class="card">
+    <div class="qhead"><span>Soru ${s.i+1} / ${n}</span><span class="sc"><span class="p">${icon("check")}${p}</span><span class="f">${icon("x")}${f}</span></span></div>
+    <div class="qprog" role="progressbar" aria-valuemin="0" aria-valuemax="${n}" aria-valuenow="${s.i}"><i style="width:${s.i/n*100}%"></i></div>
+    <div style="margin-top:18px"><span class="qwk" style="${wc(q.w)}">${wl(q.w)} · ${wk.title}</span></div>
+    <div class="qtext" id="qtext">${q.q}</div>
+    <div class="opts" id="opts" role="group" aria-labelledby="qtext">${q.opts.map((o,i)=>`<button class="opt" data-i="${i}"><span class="L">${LET[i]}</span><span>${o.t}</span><span class="st"></span></button>`).join("")}</div>
+    <div id="fb" aria-live="polite"></div>
+    <div class="qfoot"><span class="kbd"><kbd>A</kbd>–<kbd>D</kbd> ile seç · <kbd>Enter</kbd> ile ilerle</span><div class="row"><button class="btn ghost" id="quit">Sınavı bitir</button><button class="btn primary" id="next" hidden>${s.i+1<n?"Sonraki soru":"Sonucu gör"}${icon("arrow")}</button></div></div>
+  </div>`;
+  $("#opts").addEventListener("click",e=>{const b=e.target.closest(".opt");if(b)answer(+b.dataset.i);});
+  $("#next").addEventListener("click",next);
+  $("#quit").addEventListener("click",()=>{ if(s.answers.length) renderResult(); else renderSetup(); });
+}
+function answer(i){
+  const s = quizState, q = s.list[s.i];
+  if(s.answers.length > s.i) return;
+  const ok = q.opts[i].ok;
+  s.answers.push({q, picked:q.opts[i].t, ok});
+  document.querySelectorAll(".opt").forEach((b,j)=>{
+    b.disabled = true;
+    if(q.opts[j].ok){ b.classList.add("right"); b.querySelector(".st").innerHTML = icon("check"); }
+    else if(j===i){ b.classList.add("wrong"); b.querySelector(".st").innerHTML = icon("x"); }
+    else b.classList.add("dim");
+  });
+  const right = q.opts.find(o=>o.ok).t;
+  $("#fb").innerHTML = `<div class="explain ${ok?"ok":"no"}">${icon(ok?"check":"x")}<div><span class="v">${ok?"Doğru!":"Yanlış. Doğru cevap: "+right}</span><span>${q.e}</span></div></div>`;
+  const nb = $("#next"); nb.hidden = false; nb.focus({preventScroll:true});
+  $("#fb").scrollIntoView({block:"nearest"});
+}
+function next(){
+  const s = quizState;
+  if(s.answers.length <= s.i) return;
+  s.i++;
+  s.i < s.list.length ? renderQ() : renderResult();
+  $("#view-test").scrollIntoView({block:"start"});
+}
+function renderResult(){
+  const s = quizState, done = s.answers.length, pass = s.answers.filter(a=>a.ok).length, fail = done-pass;
+  const pct = done ? Math.round(pass/done*100) : 0;
+  if(!s.retry && done===s.list.length){
+    const best = store.get("plt209-best",{}), k = String(quizState.scope);
+    if(best[k]==null || pct>best[k]){ best[k]=pct; store.set("plt209-best",best); }
+  }
+  const [title,msg] = pct>=85 ? ["Çok iyi!","Bu kapsam tamamen hazır, diğer haftalara veya kopya kağıdına geçebilirsin."] : pct>=70 ? ["İyi","Aşağıdaki yanlış yaptığın soruların açıklamalarını bir kez daha oku."] : pct>=50 ? ["Ortalama","Yanlış çıkan haftaların konu tablolarını tekrar gözden geçir."] : ["Biraz daha çalışmalısın","Konu özetlerini ve kopya kağıdını okuyup tekrar dene."];
+  const color = pct>=70 ? "var(--pass)" : pct>=50 ? "var(--gold)" : "var(--fail)";
+  const byWeek = WEEKS.map(w=>{const a=s.answers.filter(x=>x.q.w===w.id);return a.length?{w:w.id,t:a.length,p:a.filter(x=>x.ok).length}:null;}).filter(Boolean);
+  const wrong = s.answers.filter(a=>!a.ok);
+  $("#quiz").innerHTML = `<div class="card">
+    <h2 style="font-size:1.6rem;font-weight:700">Sınav Sonucu</h2>
+    <div class="score">${ringSvg(pct,color)}<p class="msg"><strong>${title}</strong>${msg}</p></div>
+    <div class="runner">
+      <span class="m">$ plt209-ozel-histokimya --degerlendirme</span><br>
+      ${byWeek.map(b=>`${b.p===b.t?'<span class="p">PASS</span>':'<span class="f">FAIL</span>'}&nbsp; ${wl(b.w)}&nbsp; <span class="m">${b.p}/${b.t} doğru</span>`).join("<br>")}<br><br>
+      Toplam: <span class="p">${pass} doğru</span>, <span class="f">${fail} yanlış</span> (${done} soru)
+    </div>
+    <div class="row" style="margin-top:18px">
+      ${wrong.length?`<button class="btn primary" id="retry">${icon("redo")}Yanlışları tekrar çöz (${wrong.length})</button>`:""}
+      <button class="btn${wrong.length?"":" primary"}" id="again">${icon("play")}Yeni sınav</button>
+      <button class="btn ghost" id="tostudy">${icon("book")}Konulara dön</button>
+    </div>
+  </div>
+  ${wrong.length?`<div><h3 style="font-size:1.15rem;margin-bottom:12px">Yanlış yaptığın sorular</h3><div class="miss">${wrong.map(a=>`<div class="it"><span class="qwk" style="${wc(a.q.w)}">${wl(a.q.w)}</span><span class="q">${a.q.q}</span><span class="a"><span>Senin cevabın: <s>${a.picked}</s></span><span>Doğru cevap: <span class="ok">${a.q.o[a.q.a]}</span></span></span><span class="e">${a.q.e}</span></div>`).join("")}</div></div>`:""}`;
+  if(wrong.length) $("#retry").addEventListener("click",()=>startQuiz(wrong.map(a=>{const {opts,...q}=a.q;return q;})));
+  $("#again").addEventListener("click",renderSetup);
+  $("#tostudy").addEventListener("click",()=>show("konular"));
+}
+document.addEventListener("keydown",e=>{
+  if($("#view-test").hidden || !document.getElementById("opts")) return;
+  if(e.metaKey||e.ctrlKey||e.altKey) return;
+  if(e.target.closest && e.target.closest("input,textarea")) return;
+  const k = e.key.toUpperCase();
+  const map = {A:0,B:1,C:2,D:3,"1":0,"2":1,"3":2,"4":3};
+  if(k in map && quizState.answers.length<=quizState.i){ e.preventDefault(); answer(map[k]); }
+  else if(e.key==="Enter" && quizState.answers.length>quizState.i){ e.preventDefault(); next(); }
+});
+
+/* ===================== KARTLAR ===================== */
+let cardScope = "all", cardOrder = CARDS.map((_,i)=>i), allOpen = false;
+const HINT = `${icon("tap")}Tanımı görmek için dokun`;
+function renderCards(){
+  $("#card-filter").innerHTML = [["all","Tümü"],...WEEKS.map(w=>[w.id,wl(w.id)])].map(([v,l])=>`<button class="chip" data-v="${v}" style="${v==="all"?"":wc(v)}" aria-pressed="${String(cardScope)===String(v)}">${v==="all"?"":'<span class="dot" aria-hidden="true"></span>'}${l}</button>`).join("");
+  const list = cardOrder.filter(i=>cardScope==="all"||CARDS[i][0]===cardScope);
+  $("#deck").innerHTML = list.map(i=>{const [w,t,d]=CARDS[i];return `<button class="fc" style="${wc(w)}" aria-expanded="${allOpen}"><span class="w">${wl(w)}</span><span class="term">${t}</span><span class="def" ${allOpen?"":"hidden"}>${d}</span><span class="hint">${allOpen?"":HINT}</span></button>`;}).join("");
+}
+$("#card-filter").addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;cardScope=b.dataset.v==="all"?"all":+b.dataset.v;renderCards();});
+$("#deck").addEventListener("click",e=>{
+  const c = e.target.closest(".fc"); if(!c) return;
+  const open = c.getAttribute("aria-expanded")!=="true";
+  c.setAttribute("aria-expanded",open); c.querySelector(".def").hidden=!open; c.querySelector(".hint").innerHTML=open?"":HINT;
+});
+$("#card-shuffle").addEventListener("click",()=>{cardOrder=shuffle(cardOrder);allOpen=false;renderCards();});
+$("#card-reveal").addEventListener("click",()=>{allOpen=!allOpen;renderCards();});
+
+/* ===================== KOPYA KAĞIDI ===================== */
+let cheatScope = "all";
+function renderCheat(){
+  $("#cheat-filter").innerHTML = [["all","Tümü"],...WEEKS.map(w=>[w.id,wl(w.id)])].map(([v,l])=>`<button class="chip" data-v="${v}" style="${v==="all"?"":wc(v)}" aria-pressed="${String(cheatScope)===String(v)}">${v==="all"?"":'<span class="dot" aria-hidden="true"></span>'}${l}</button>`).join("");
+  const list = CHEATS.filter(c=>cheatScope==="all"||c.w===cheatScope);
+  $("#cheat-grid").innerHTML = list.map(c=>`<article class="cheat-card" style="${wc(c.w)}"><div class="ch-head"><h3>${c.title}</h3><span class="badge">${c.tag}</span></div>${c.body}</article>`).join("");
+}
+$("#cheat-filter").addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;cheatScope=b.dataset.v==="all"?"all":+b.dataset.v;renderCheat();});
+
+/* ===================== BAŞLAT ===================== */
+renderStudy(); renderSetup(); renderCards(); renderCheat();
+show(location.hash.slice(1) || "konular", true);
+</script>
+</body>
+</html>
